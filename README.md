@@ -10,6 +10,14 @@ Portal petisi publik eksperimental yang memadukan UX layanan pemerintah dengan v
 - Live signature counter dan milestone 10K/100K
 - Modal pembuatan petisi
 - Layout responsif desktop dan mobile
+- Halaman Jelajahi dengan globe jaringan dukungan 3D
+- Dashboard CRUD petisi dengan penyimpanan localStorage
+
+## Halaman
+
+- `/` — landing page dan kota futuristik
+- `/explore.html` — visualisasi gerakan publik 3D
+- `/dashboard.html` — create, read, update, delete petisi
 
 ## Menjalankan lokal
 

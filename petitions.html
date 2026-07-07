@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#e31f36" />
+  <meta name="description" content="Temukan seluruh petisi publik di SUARA." />
+  <title>Semua Petisi — SUARA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="portal-body petition-library-page">
+  <div class="portal-noise" aria-hidden="true"></div>
+  <header class="portal-header solid-header">
+    <a class="portal-brand" href="/"><span class="portal-mark"><i data-lucide="landmark"></i></span><b>SUARA</b><small>Ruang Petisi Publik</small></a>
+    <nav aria-label="Navigasi utama"><a href="/">Beranda</a><a href="/explore.html">Peta 3D</a><a class="active" href="/petitions.html">Semua petisi</a><a href="/dashboard.html">Dashboard</a></nav>
+    <a class="header-cta" href="/dashboard.html?action=create"><i data-lucide="plus"></i> Mulai petisi</a><button class="portal-menu" aria-label="Buka menu"><i data-lucide="menu"></i></button>
+  </header>
+  <main>
+    <section class="library-hero">
+      <div class="library-copy enter-up"><p class="portal-kicker"><span></span> DIREKTORI GERAKAN PUBLIK</p><h1>Temukan suara<br>yang <em>sejalan.</em></h1><p>Telusuri semua petisi yang dibuat warga, ikuti progresnya, dan lihat siapa yang diminta mengambil tindakan.</p></div>
+      <div class="library-signal" aria-hidden="true"><div class="signal-sphere"><i></i><i></i><i></i><span></span></div><small>PUBLIC MOVEMENT INDEX</small></div>
+    </section>
+
+    <section class="library-content">
+      <div class="library-toolbar">
+        <label class="library-search"><i data-lucide="search"></i><input id="librarySearch" type="search" placeholder="Cari judul, kategori, atau lembaga..." /></label>
+        <select id="libraryCategory" aria-label="Filter kategori"><option value="Semua">Semua kategori</option><option>Umum</option><option>Lingkungan</option><option>Transportasi</option><option>Pendidikan</option><option>Kesehatan</option><option>Teknologi</option></select>
+        <select id="libraryStatus" aria-label="Filter status"><option value="Semua">Semua status</option><option>Draft</option><option>Aktif</option><option>Selesai</option></select>
+        <select id="librarySort" aria-label="Urutkan petisi"><option value="newest">Terbaru</option><option value="popular">Dukungan terbanyak</option><option value="progress">Progres tertinggi</option></select>
+      </div>
+      <div class="library-summary"><p><strong id="resultCount">0</strong> petisi ditemukan</p><span><i></i> Data tersimpan langsung dari dashboard warga</span></div>
+      <div class="petition-card-grid" id="petitionCardGrid"></div>
+      <div class="library-empty" id="libraryEmpty"><i data-lucide="files"></i><h2>Belum ada petisi</h2><p>Buat petisi pertama atau ubah filter pencarian.</p><a href="/dashboard.html?action=create">Mulai petisi <i data-lucide="arrow-right"></i></a></div>
+    </section>
+  </main>
+  <footer class="portal-footer"><a class="portal-brand" href="/"><span class="portal-mark"><i data-lucide="landmark"></i></span><b>SUARA</b></a><p>Setiap gerakan terhubung langsung dengan database warga.</p><span>© 2026 SUARA</span></footer>
+  <script type="module" src="/src/petitions.js"></script>
+</body>
+</html>

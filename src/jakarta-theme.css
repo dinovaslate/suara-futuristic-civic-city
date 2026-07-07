@@ -1,0 +1,95 @@
+.petition-detail-page{
+  --lime:#ff3b4d;
+  --mint:#fffaf6;
+  --green:#d7192d;
+  --ink:#091426;
+  --indo-red:#e31f36;
+  --indo-white:#fffaf6;
+  background:#f7f4ef;
+}
+
+.petition-detail-page .solid-header{
+  background:rgba(5,11,25,.96);
+  border-bottom:1px solid rgba(255,255,255,.12);
+  backdrop-filter:blur(18px);
+}
+.petition-detail-page .portal-mark,
+.petition-detail-page .header-cta{background:var(--indo-red);color:white}
+.petition-detail-page .portal-header nav a.active:after{background:linear-gradient(90deg,var(--indo-red) 0 50%,white 50%)}
+
+.petition-detail-page .detail-hero{
+  min-height:650px;
+  background:
+    radial-gradient(circle at 84% 25%,rgba(227,31,54,.34),transparent 26%),
+    radial-gradient(circle at 62% 112%,rgba(255,255,255,.16),transparent 35%),
+    linear-gradient(122deg,#050a17 0%,#0a1931 53%,#3a0914 122%);
+  box-shadow:inset 0 -1px rgba(255,255,255,.14);
+}
+.petition-detail-page .detail-hero:before{
+  inset:9% -17% -52%;
+  background-image:
+    linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(227,31,54,.15) 1px,transparent 1px);
+  background-size:58px 58px;
+  transform:perspective(650px) rotateX(64deg) scale(1.25);
+  opacity:.75;
+}
+.petition-detail-page .detail-hero:after{
+  z-index:3;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(5,10,23,.99) 0%,rgba(7,15,31,.94) 36%,rgba(8,18,35,.42) 61%,rgba(33,5,13,.08) 100%);
+}
+.petition-detail-page .detail-main{z-index:4}
+.petition-detail-page .detail-main:before{
+  content:"JAKARTA SMART CIVIC NETWORK / NODE 017";
+  display:block;
+  margin-bottom:28px;
+  color:rgba(255,255,255,.47);
+  font:700 8px var(--head);
+  letter-spacing:.2em;
+}
+.petition-detail-page .breadcrumbs a{color:#ff6572}
+.petition-detail-page .detail-badges span:last-child{color:white;border-color:rgba(255,69,84,.7);background:rgba(227,31,54,.17)}
+.petition-detail-page .detail-main h1{max-width:690px;text-shadow:0 16px 55px rgba(0,0,0,.34)}
+.petition-detail-page .detail-owner{color:rgba(255,255,255,.56)}
+.petition-detail-page .detail-orb{z-index:2;inset:0}
+.petition-detail-page .detail-orb:before{
+  content:"MEMUAT DIGITAL TWIN JAKARTA";
+  position:absolute;
+  right:14%;
+  bottom:16%;
+  z-index:4;
+  color:rgba(255,255,255,.52);
+  font:700 8px var(--head);
+  letter-spacing:.19em;
+  transition:.4s;
+}
+.petition-detail-page .detail-orb.model-ready:before{opacity:0;transform:translateY(8px)}
+.map-attribution{position:absolute;z-index:5;right:22px;bottom:18px;color:rgba(255,255,255,.48);font:600 8px var(--head);letter-spacing:.08em;text-decoration:none;pointer-events:auto;transition:color .2s ease}
+.map-attribution:hover{color:#fff}
+
+.jakarta-skyline{position:absolute;z-index:1;left:38%;right:0;bottom:0;height:205px;overflow:hidden;opacity:.58;pointer-events:none;border-bottom:3px solid var(--indo-red)}
+.jakarta-skyline>span{position:absolute;left:var(--x);bottom:0;width:var(--w);height:var(--h);background:linear-gradient(180deg,rgba(18,35,61,.9),rgba(4,10,22,.98));border:1px solid rgba(255,255,255,.13);box-shadow:inset 0 4px rgba(227,31,54,.45)}
+.jakarta-skyline>span:before{content:"";position:absolute;inset:13px 7px;background:repeating-linear-gradient(0deg,transparent 0 12px,rgba(255,255,255,.16) 13px 15px),repeating-linear-gradient(90deg,transparent 0 13px,rgba(227,31,54,.18) 14px 16px)}
+.jakarta-skyline .monas-tower{position:absolute;left:57%;bottom:0;width:16px;height:172px;background:linear-gradient(90deg,#d9dde5,#fff,#c8ced9);clip-path:polygon(37% 0,63% 0,100% 100%,0 100%);filter:drop-shadow(0 0 18px rgba(255,255,255,.28))}
+.jakarta-skyline .monas-tower:before{content:"";position:absolute;left:3px;top:0;width:10px;height:28px;background:var(--indo-red);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.jakarta-skyline em{position:absolute;left:5%;bottom:16px;color:rgba(255,255,255,.4);font:700 7px var(--head);font-style:normal;letter-spacing:.18em}
+
+.petition-detail-page .portal-kicker.dark{color:var(--indo-red)}
+.petition-detail-page .support-panel{border-top:4px solid var(--indo-red);box-shadow:0 28px 80px rgba(9,20,38,.08)}
+.petition-detail-page .support-live{color:#7d1723}
+.petition-detail-page .support-live i{background:var(--indo-red);box-shadow:0 0 0 5px rgba(227,31,54,.1)}
+.petition-detail-page .support-progress i{background:linear-gradient(90deg,var(--indo-red),#ff6672)}
+.petition-detail-page .support-panel #detailSupport{background:var(--indo-red)}
+.petition-detail-page .support-panel #detailSupport:hover{background:#b81225}
+.petition-detail-page .related-section{background:linear-gradient(135deg,#f0ece7,#f9f7f2)}
+.petition-detail-page .related-card span{color:var(--indo-red)}
+.petition-detail-page .portal-footer{background:#050b19}
+.petition-detail-page .portal-footer .portal-mark{background:var(--indo-red)}
+
+@media(max-width:680px){
+  .petition-detail-page .detail-hero{min-height:670px}
+  .petition-detail-page .detail-orb{inset:30% 0 0;opacity:.76}
+  .jakarta-skyline{left:0;height:150px;opacity:.4}
+  .petition-detail-page .detail-main:before{margin-bottom:20px}
+}

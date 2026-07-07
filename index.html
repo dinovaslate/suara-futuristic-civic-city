@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#07120f" />
-    <meta name="description" content="SUARA — ruang petisi publik untuk mengubah dukungan menjadi kebijakan." />
-    <title>SUARA — Petisi Publik</title>
+    <meta name="theme-color" content="#e31f36" />
+    <meta name="description" content="SUARA â€” ruang petisi publik untuk mengubah dukungan menjadi kebijakan." />
+    <title>SUARA â€” Petisi Publik</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,16 +15,17 @@
     <div class="cursor-glow" aria-hidden="true"></div>
 
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="SUARA beranda">
+      <a class="brand" href="/" aria-label="SUARA beranda">
         <span class="brand-mark"><i data-lucide="landmark"></i></span>
         <span class="brand-name">SUARA</span>
         <span class="brand-divider"></span>
         <span class="brand-sub">Ruang Petisi Publik</span>
       </a>
       <nav aria-label="Navigasi utama">
-        <a href="#petisi">Jelajahi</a>
+        <a href="/explore.html">Jelajahi</a>
+        <a href="/petitions.html">Semua petisi</a>
         <a href="#cara-kerja">Cara kerja</a>
-        <a href="#transparansi">Transparansi</a>
+        <a href="/dashboard.html">Dashboard</a>
       </nav>
       <div class="header-actions">
         <button class="text-btn" id="loginBtn"><i data-lucide="circle-user-round"></i> Masuk</button>
@@ -148,18 +149,31 @@
     <footer>
       <a class="brand footer-brand" href="#top"><span class="brand-mark"><i data-lucide="landmark"></i></span><span class="brand-name">SUARA</span></a>
       <p>Infrastruktur partisipasi publik yang independen, aman, dan transparan.</p>
-      <div><a href="#">Aksesibilitas</a><a href="#">Privasi</a><a href="#">Ketentuan</a><a href="#">Bantuan</a><a href="https://glenatron.artstation.com/projects/AJGbV" target="_blank" rel="noopener">3D: Glen Fox · CC BY</a></div>
-      <span>© 2026 SUARA</span>
+      <div><a href="#">Aksesibilitas</a><a href="#">Privasi</a><a href="#">Ketentuan</a><a href="#">Bantuan</a><a href="https://glenatron.artstation.com/projects/AJGbV" target="_blank" rel="noopener">3D: Glen Fox Â· CC BY</a></div>
+      <span>Â© 2026 SUARA</span>
     </footer>
 
     <dialog id="petitionModal">
-      <button class="modal-close" aria-label="Tutup"><i data-lucide="x"></i></button>
-      <p class="kicker">MULAI PERUBAHAN</p>
-      <h2>Buat petisi publik</h2>
-      <p>Ceritakan masalahnya. Kami akan membantu menyusun tuntutan yang jelas dan terukur.</p>
-      <label>Judul petisi<input placeholder="Contoh: Sediakan trotoar aman di..." /></label>
-      <label>Ditujukan kepada<input placeholder="Lembaga atau pengambil keputusan" /></label>
-      <button class="primary-btn modal-next">Lanjutkan <i data-lucide="arrow-right"></i></button>
+      <form id="quickPetitionForm">
+        <button type="button" class="modal-close" aria-label="Tutup"><i data-lucide="x"></i></button>
+        <div class="modal-progress" aria-label="Langkah pembuatan petisi"><span class="active"></span><span></span><b>1 / 2</b></div>
+        <section class="quick-step active" data-step="1">
+          <p class="kicker">MULAI PERUBAHAN</p>
+          <h2>Buat petisi publik</h2>
+          <p>Ceritakan masalahnya. Draf ini langsung tersimpan dan dapat dikelola melalui dashboard.</p>
+          <label>Judul petisi<input id="quickTitle" required maxlength="120" placeholder="Contoh: Sediakan trotoar aman di..." /></label>
+          <label>Ditujukan kepada<input id="quickOwner" required placeholder="Lembaga atau pengambil keputusan" /></label>
+          <button type="button" class="primary-btn modal-next" id="quickNext">Lanjutkan <i data-lucide="arrow-right"></i></button>
+        </section>
+        <section class="quick-step" data-step="2">
+          <p class="kicker">PERJELAS TUNTUTAN</p>
+          <h2>Lengkapi drafmu</h2>
+          <p>Informasi ini dapat diubah kembali kapan saja melalui dashboard.</p>
+          <div class="quick-grid"><label>Kategori<select id="quickCategory"><option>Umum</option><option>Lingkungan</option><option>Transportasi</option><option>Pendidikan</option><option>Kesehatan</option><option>Teknologi</option></select></label><label>Target dukungan<input id="quickTarget" type="number" min="100" step="100" value="10000" required /></label></div>
+          <label>Ringkasan tuntutan<textarea id="quickDescription" rows="4" required placeholder="Jelaskan masalah dan perubahan yang kamu minta..."></textarea></label>
+          <div class="quick-actions"><button type="button" class="quick-back" id="quickBack"><i data-lucide="arrow-left"></i> Kembali</button><button type="submit" class="primary-btn quick-save">Simpan draf <i data-lucide="check"></i></button></div>
+        </section>
+      </form>
     </dialog>
 
     <div class="toast" id="toast"><i data-lucide="check-circle-2"></i><div><strong>Dukunganmu tercatat</strong><span>Terima kasih sudah ikut bersuara.</span></div></div>

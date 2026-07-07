@@ -1,0 +1,11 @@
+Jakarta Monas Building Footprints
+
+Source: OpenStreetMap contributors
+Data license: Open Data Commons Open Database License (ODbL) 1.0
+Copyright and attribution: https://www.openstreetmap.org/copyright
+
+Area: Central Jakarta around Monumen Nasional
+Bounding box: -6.1815,106.8170,-6.1690,106.8365
+Retrieved via Overpass API on 2026-07-07.
+
+The website displays the required attribution next to the 3D scene.

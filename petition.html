@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#e31f36" />
+  <meta name="description" content="Detail petisi publik SUARA." />
+  <title>Detail Petisi â€” SUARA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="portal-body petition-detail-page">
+  <div class="portal-noise" aria-hidden="true"></div>
+  <header class="portal-header solid-header">
+    <a class="portal-brand" href="/"><span class="portal-mark"><i data-lucide="landmark"></i></span><b>SUARA</b><small>Ruang Petisi Publik</small></a>
+    <nav aria-label="Navigasi utama"><a href="/">Beranda</a><a href="/explore.html">Peta 3D</a><a class="active" href="/petitions.html">Semua petisi</a><a href="/dashboard.html">Dashboard</a></nav>
+    <a class="header-cta" href="/dashboard.html?action=create"><i data-lucide="plus"></i> Mulai petisi</a><button class="portal-menu" aria-label="Buka menu"><i data-lucide="menu"></i></button>
+  </header>
+  <main id="detailRoot">
+    <section class="detail-not-found" id="detailNotFound" hidden><i data-lucide="file-question"></i><h1>Petisi tidak ditemukan</h1><p>Record mungkin telah dihapus atau tautannya tidak valid.</p><a href="/petitions.html">Kembali ke semua petisi</a></section>
+    <div id="detailContent" hidden>
+      <section class="detail-hero">
+        <div class="detail-main enter-up"><nav class="breadcrumbs"><a href="/petitions.html">Semua petisi</a><i data-lucide="chevron-right"></i><span id="crumbCategory"></span></nav><div class="detail-badges"><span id="detailCategory"></span><span id="detailStatus"></span></div><h1 id="detailTitle"></h1><p class="detail-owner">Ditujukan kepada <strong id="detailOwner"></strong></p></div>
+        <div class="jakarta-skyline" aria-hidden="true"><span style="--x:4%;--w:52px;--h:78px"></span><span style="--x:12%;--w:72px;--h:132px"></span><span style="--x:24%;--w:58px;--h:96px"></span><span style="--x:33%;--w:86px;--h:164px"></span><span style="--x:47%;--w:48px;--h:112px"></span><i class="monas-tower"></i><span style="--x:65%;--w:76px;--h:146px"></span><span style="--x:76%;--w:56px;--h:90px"></span><span style="--x:86%;--w:88px;--h:178px"></span><em>JAKARTA / CIVIC GRID 06.2S - 106.8E</em></div>
+        <div class="detail-orb" id="detailOrb" aria-label="Model tiga dimensi kawasan Monas dan gedung Jakarta"><a class="map-attribution" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">Data gedung © OpenStreetMap contributors · ODbL</a></div>
+      </section>
+      <section class="detail-layout">
+        <article class="detail-story"><p class="portal-kicker dark"><span></span> TENTANG PETISI INI</p><h2>Perubahan yang diminta</h2><p id="detailDescription"></p><div class="detail-meta"><div><span>Dibuat</span><b id="detailCreated"></b></div><div><span>Diperbarui</span><b id="detailUpdated"></b></div><div><span>ID publik</span><b id="detailId"></b></div></div></article>
+        <aside class="support-panel"><p class="support-live"><i></i> DUKUNGAN TERVERIFIKASI</p><strong id="detailSignatures"></strong><span>dari <b id="detailTarget"></b> target suara</span><div class="support-progress"><i id="detailProgress"></i></div><div class="support-milestones"><span>0</span><span>10K Â· Respons</span><span>100%</span></div><button id="detailSupport"><i data-lucide="pen-line"></i> Dukung petisi ini</button><button class="share-action" id="sharePetition"><i data-lucide="share-2"></i> Salin tautan</button><small id="draftNotice">Petisi berstatus Draft. Terbitkan melalui Dashboard untuk menerima dukungan.</small></aside>
+      </section>
+      <section class="related-section"><div><p class="portal-kicker dark"><span></span> GERAKAN TERKAIT</p><h2>Petisi lain yang mungkin penting</h2></div><div class="related-grid" id="relatedGrid"></div></section>
+    </div>
+  </main>
+  <div class="portal-toast" id="detailToast"><i data-lucide="check-circle-2"></i><div><b>Dukungan tercatat</b><span>Terima kasih sudah ikut bersuara.</span></div></div>
+  <footer class="portal-footer"><a class="portal-brand" href="/"><span class="portal-mark"><i data-lucide="landmark"></i></span><b>SUARA</b></a><p>Mandat publik, terlihat oleh publik.</p><span>Â© 2026 SUARA</span></footer>
+  <script type="module" src="/src/petition.js"></script>
+</body>
+</html>
