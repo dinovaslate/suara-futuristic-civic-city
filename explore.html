@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#e31f36" />
+  <meta name="description" content="Jelajahi gerakan publik dalam peta dukungan 3D SUARA." />
+  <title>Jelajahi Gerakan â€” SUARA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="portal-body explore-page">
+  <div class="portal-noise" aria-hidden="true"></div>
+  <div class="pointer-aura" aria-hidden="true"></div>
+  <header class="portal-header">
+    <a class="portal-brand" href="/"><span class="portal-mark"><i data-lucide="landmark"></i></span><b>SUARA</b><small>Ruang Petisi Publik</small></a>
+    <nav aria-label="Navigasi utama"><a href="/">Beranda</a><a class="active" href="/explore.html">Jelajahi</a><a href="/petitions.html">Semua petisi</a><a href="/dashboard.html">Dashboard</a></nav>
+    <a class="header-cta" href="/dashboard.html?action=create"><i data-lucide="plus"></i> Mulai petisi</a>
+    <button class="portal-menu" aria-label="Buka menu"><i data-lucide="menu"></i></button>
+  </header>
+
+  <main>
+    <section class="explore-hero">
+      <div class="explore-copy enter-up">
+        <p class="portal-kicker"><span></span> PETA GERAKAN PUBLIK Â· LIVE</p>
+        <h1>Lihat bagaimana<br><em>suara bergerak.</em></h1>
+        <p>Setiap titik adalah warga. Setiap garis adalah dukungan yang mengubah isu lokal menjadi mandat nasional.</p>
+        <div class="explore-filters" role="group" aria-label="Filter isu">
+          <button class="active" data-topic="Semua">Semua isu</button><button data-topic="Lingkungan">Lingkungan</button><button data-topic="Transportasi">Transportasi</button><button data-topic="Pendidikan">Pendidikan</button>
+        </div>
+      </div>
+      <div class="network-scene" id="networkScene" aria-label="Visualisasi globe dukungan publik 3D">
+        <div class="scene-corner top-left"><span>NODE AKTIF</span><b id="activeNodes">18.427</b></div>
+        <div class="scene-corner top-right"><span>SINKRONISASI</span><b><i></i> LIVE</b></div>
+        <div class="scene-corner bottom-left"><span>GERAKAN NASIONAL</span><b>327 tercapai</b></div>
+        <div class="scene-hint"><i data-lucide="move-3d"></i> Gerakkan pointer untuk menjelajah</div>
+      </div>
+      <div class="hero-index" aria-hidden="true">01 <span></span> NETWORK</div>
+    </section>
+
+    <section class="movement-feed">
+      <div class="feed-heading reveal"><div><p class="portal-kicker dark"><span></span> MOMENTUM TERTINGGI</p><h2>Gerakan yang<br>sedang <em>tumbuh.</em></h2></div><p>Diperbarui berdasarkan dukungan terverifikasi dalam 24 jam terakhir.</p></div>
+      <div class="movement-grid" id="movementGrid"></div>
+    </section>
+
+    <section class="impact-timeline">
+      <div class="timeline-intro reveal"><p class="portal-kicker"><span></span> JALUR DAMPAK</p><h2>Dari satu nama<br>menjadi agenda negara.</h2></div>
+      <div class="timeline-track">
+        <article class="reveal"><span>01</span><i></i><b>Petisi diverifikasi</b><p>Tuntutan dan tujuan diperiksa moderator publik.</p></article>
+        <article class="reveal"><span>02</span><i></i><b>10.000 dukungan</b><p>Lembaga terkait wajib memberi respons terbuka.</p></article>
+        <article class="reveal"><span>03</span><i></i><b>100.000 dukungan</b><p>Masuk pertimbangan agenda sidang publik.</p></article>
+        <article class="reveal"><span>04</span><i></i><b>Kebijakan berubah</b><p>Hasil, dokumen, dan tindak lanjut dapat dilacak.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="portal-footer"><a class="portal-brand" href="/"><span class="portal-mark"><i data-lucide="landmark"></i></span><b>SUARA</b></a><p>Infrastruktur partisipasi publik yang aman dan transparan.</p><span>Â© 2026 SUARA</span></footer>
+  <script type="module" src="/src/explore.js"></script>
+</body>
+</html>

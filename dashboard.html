@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#e31f36" />
+  <meta name="description" content="Dashboard pengelolaan petisi publik SUARA." />
+  <title>Dashboard Petisi â€” SUARA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="portal-body dashboard-page">
+  <div class="portal-noise" aria-hidden="true"></div>
+  <aside class="dash-sidebar">
+    <a class="portal-brand" href="/"><span class="portal-mark"><i data-lucide="landmark"></i></span><b>SUARA</b></a>
+    <nav><a href="/"><i data-lucide="house"></i><span>Beranda</span></a><a href="/explore.html"><i data-lucide="orbit"></i><span>Jelajahi</span></a><a href="/petitions.html"><i data-lucide="files"></i><span>Semua petisi</span></a><a class="active" href="/dashboard.html"><i data-lucide="layout-dashboard"></i><span>Petisi saya</span></a><a href="#activity"><i data-lucide="activity"></i><span>Aktivitas</span></a></nav>
+    <div class="sidebar-foot"><span>DATA TERVERIFIKASI</span><b><i></i> Sistem aktif</b><small>Sinkronisasi 1 menit lalu</small></div>
+  </aside>
+
+  <main class="dash-main">
+    <header class="dash-topbar"><div><p>RUANG KERJA PUBLIK</p><h1>Dashboard petisi</h1></div><div class="dash-actions"><a href="/explore.html" aria-label="Jelajahi"><i data-lucide="globe-2"></i></a><button id="newPetition"><i data-lucide="plus"></i> Buat petisi</button></div></header>
+
+    <section class="dash-hero">
+      <div class="dash-hero-copy"><p class="portal-kicker"><span></span> RINGKASAN GERAKAN</p><h2>Kelola mandat<br>publikmu.</h2><p>Buat tuntutan, pantau dukungan, dan perbarui status gerakan dari satu tempat.</p></div>
+      <div class="dash-orb" id="dashOrb" aria-hidden="true"></div>
+      <div class="orb-caption"><span>PUBLIC SIGNAL</span><b>+18.4% minggu ini</b></div>
+    </section>
+
+    <section class="dash-stats" aria-label="Statistik petisi">
+      <article><span>Total petisi</span><strong id="statTotal">0</strong><small><i data-lucide="files"></i> seluruh draft & publik</small></article>
+      <article><span>Total dukungan</span><strong id="statSigns">0</strong><small class="positive"><i data-lucide="trending-up"></i> dukungan terverifikasi</small></article>
+      <article><span>Petisi aktif</span><strong id="statActive">0</strong><small><i data-lucide="radio"></i> sedang mengumpulkan suara</small></article>
+      <article><span>Respons resmi</span><strong id="statResponse">0</strong><small class="positive"><i data-lucide="badge-check"></i> melewati 10.000 suara</small></article>
+    </section>
+
+    <section class="petition-manager" id="activity">
+      <div class="manager-head"><div><p class="portal-kicker dark"><span></span> DATABASE PETISI</p><h2>Semua gerakan</h2></div><div class="manager-tools"><label><i data-lucide="search"></i><input id="petitionSearch" type="search" placeholder="Cari judul atau kategori..." /></label><select id="statusFilter" aria-label="Filter status"><option value="Semua">Semua status</option><option>Aktif</option><option>Draft</option><option>Selesai</option></select></div></div>
+      <div class="petition-table-wrap">
+        <table><thead><tr><th>Petisi</th><th>Status</th><th>Dukungan</th><th>Target</th><th>Diperbarui</th><th><span class="sr-only">Aksi</span></th></tr></thead><tbody id="petitionRows"></tbody></table>
+        <div class="empty-state" id="emptyState"><i data-lucide="inbox"></i><h3>Tidak ada petisi</h3><p>Ubah filter atau buat gerakan baru.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="editor-dialog" id="petitionEditor">
+    <form id="petitionForm">
+      <div class="dialog-head"><div><p class="portal-kicker dark"><span></span> EDITOR PETISI</p><h2 id="editorTitle">Buat petisi baru</h2></div><button type="button" class="icon-close" data-close-editor aria-label="Tutup"><i data-lucide="x"></i></button></div>
+      <input type="hidden" id="petitionId" />
+      <div class="form-grid"><label class="span-2">Judul petisi<input id="petitionTitle" required maxlength="120" placeholder="Tulis tuntutan yang jelas..." /></label><label>Kategori<select id="petitionCategory" required><option>Umum</option><option>Lingkungan</option><option>Transportasi</option><option>Pendidikan</option><option>Kesehatan</option><option>Teknologi</option></select></label><label>Status<select id="petitionStatus"><option>Draft</option><option>Aktif</option><option>Selesai</option></select></label><label>Target dukungan<input id="petitionTarget" type="number" required min="100" step="100" value="10000" /></label><label>Dukungan saat ini<input id="petitionSignatures" type="number" required min="0" value="0" /></label><label class="span-2">Ditujukan kepada<input id="petitionOwner" required placeholder="Lembaga atau pengambil keputusan" /></label><label class="span-2">Ringkasan<textarea id="petitionDescription" required rows="4" placeholder="Jelaskan masalah dan perubahan yang diminta..."></textarea></label></div>
+      <div class="dialog-actions"><button type="button" class="secondary-action" data-close-editor>Batal</button><button type="submit" class="save-action"><i data-lucide="save"></i> Simpan petisi</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="delete-dialog" id="deleteDialog"><div class="danger-icon"><i data-lucide="trash-2"></i></div><h2>Hapus petisi?</h2><p>Data gerakan ini akan dihapus dari perangkat dan tidak dapat dipulihkan.</p><div><button id="cancelDelete">Batal</button><button id="confirmDelete">Ya, hapus</button></div></dialog>
+  <div class="portal-toast" id="portalToast"><i data-lucide="check-circle-2"></i><div><b>Petisi disimpan</b><span>Perubahan tersimpan di perangkat ini.</span></div></div>
+  <script type="module" src="/src/dashboard.js"></script>
+</body>
+</html>
