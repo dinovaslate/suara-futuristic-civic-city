@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07120f" />
+    <meta name="description" content="SUARA — ruang petisi publik untuk mengubah dukungan menjadi kebijakan." />
+    <title>SUARA — Petisi Publik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="SUARA beranda">
+        <span class="brand-mark"><i data-lucide="landmark"></i></span>
+        <span class="brand-name">SUARA</span>
+        <span class="brand-divider"></span>
+        <span class="brand-sub">Ruang Petisi Publik</span>
+      </a>
+      <nav aria-label="Navigasi utama">
+        <a href="#petisi">Jelajahi</a>
+        <a href="#cara-kerja">Cara kerja</a>
+        <a href="#transparansi">Transparansi</a>
+      </nav>
+      <div class="header-actions">
+        <button class="text-btn" id="loginBtn"><i data-lucide="circle-user-round"></i> Masuk</button>
+        <button class="primary-btn compact" id="createPetition"><i data-lucide="plus"></i> Mulai petisi</button>
+        <button class="menu-btn" aria-label="Buka menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-canvas" id="three-container" aria-hidden="true"></div>
+        <div class="hero-vignette"></div>
+        <div class="hero-grid"></div>
+
+        <div class="live-badge"><span></span> 2.418 orang sedang bersuara</div>
+
+        <div class="hero-copy">
+          <div class="eyebrow"><span>Platform partisipasi publik</span><span class="line"></span><span>Indonesia</span></div>
+          <h1 id="hero-title">Suara kecil.<br><em>Dampak besar.</em></h1>
+          <p>Temukan, dukung, dan mulai perubahan yang penting. Setiap tanda tangan adalah mandat publik yang tercatat.</p>
+
+          <form class="search-box" id="heroSearch">
+            <i data-lucide="search"></i>
+            <input id="searchInput" type="search" placeholder="Cari isu yang ingin kamu ubah..." aria-label="Cari petisi" autocomplete="off" />
+            <button type="submit">Cari petisi <i data-lucide="arrow-right"></i></button>
+          </form>
+
+          <div class="hero-meta">
+            <div><strong data-count="18427">0</strong><span>petisi aktif</span></div>
+            <div><strong data-count="3200000" data-short="true">0</strong><span>tanda tangan terverifikasi</span></div>
+            <div><strong data-count="327">0</strong><span>perubahan tercapai</span></div>
+          </div>
+        </div>
+
+        <div class="scene-label label-one"><span></span><b>01</b> Dukungan publik</div>
+        <div class="scene-label label-two"><span></span><b>02</b> Respons pemerintah</div>
+        <div class="scene-label label-three"><span></span><b>03</b> Agenda sidang</div>
+
+        <a class="scroll-cue" href="#petisi"><span>Jelajahi gerakan</span><i data-lucide="arrow-down"></i></a>
+      </section>
+
+      <section class="signal-strip" aria-label="Aktivitas terkini">
+        <div class="ticker-label"><span></span> LIVE</div>
+        <div class="ticker-window">
+          <div class="ticker-track">
+            <span><b>+128</b> dukungan untuk Transportasi Publik Aman</span><i></i>
+            <span><b>Bandung</b> baru saja melewati 50.000 suara</span><i></i>
+            <span><b>3 menit lalu</b> petisi Perlindungan Hutan mendapat respons</span><i></i>
+            <span><b>+128</b> dukungan untuk Transportasi Publik Aman</span><i></i>
+          </div>
+        </div>
+      </section>
+
+      <section class="petitions-section" id="petisi">
+        <div class="section-head">
+          <div>
+            <p class="kicker">GERAKAN HARI INI</p>
+            <h2>Yang sedang<br><span>diperjuangkan.</span></h2>
+          </div>
+          <div class="head-side">
+            <p>Petisi dengan momentum tertinggi dalam 24 jam terakhir. Dukunganmu menentukan apa yang dibahas selanjutnya.</p>
+            <div class="filters" role="group" aria-label="Filter petisi">
+              <button class="active" data-filter="all">Terpopuler</button>
+              <button data-filter="baru">Terbaru</button>
+              <button data-filter="mendesak">Mendesak</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="petition-stage">
+          <div class="petition-list" id="petitionList"></div>
+          <aside class="focus-card" id="focusCard">
+            <div class="focus-orbit" aria-hidden="true"><canvas id="miniCanvas"></canvas></div>
+            <div class="focus-top"><span class="status-pill"><i data-lucide="radio"></i> MOMENTUM TINGGI</span><span id="focusNumber">01 / 04</span></div>
+            <div class="focus-body">
+              <span class="category" id="focusCategory">Lingkungan</span>
+              <h3 id="focusTitle">Selamatkan 12.000 hektare hutan adat Papua</h3>
+              <p id="focusExcerpt">Desak penghentian izin pembukaan lahan dan akui hak kelola masyarakat adat.</p>
+            </div>
+            <div class="focus-progress">
+              <div class="progress-copy"><strong id="focusSignatures">84.291</strong><span>dari <b id="focusTarget">100.000</b> suara</span></div>
+              <div class="progress-track"><span id="focusBar" style="width:84%"></span><i style="left:10%"></i></div>
+              <div class="milestones"><span>Mulai</span><span>10K<br><b>Respons</b></span><span>100K<br><b>Sidang</b></span></div>
+            </div>
+            <button class="support-btn" id="supportBtn">Dukung petisi ini <i data-lucide="arrow-up-right"></i></button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="how-section" id="cara-kerja">
+        <div class="how-visual">
+          <div class="rings"><span></span><span></span><span></span><i data-lucide="fingerprint"></i></div>
+          <p>Setiap suara diverifikasi.<br>Setiap proses dapat dilacak.</p>
+        </div>
+        <div class="how-content">
+          <p class="kicker">DARI SUARA KE KEBIJAKAN</p>
+          <h2>Proses yang jelas.<br><span>Hasil yang nyata.</span></h2>
+          <div class="steps">
+            <article><b>01</b><div><h3>Mulai gerakan</h3><p>Ajukan isu dengan tujuan dan tuntutan yang jelas. Tim moderator memverifikasi sebelum tayang.</p></div></article>
+            <article><b>02</b><div><h3>Bangun dukungan</h3><p>Bagikan petisi dan pantau pertumbuhan dukungan terverifikasi secara langsung.</p></div></article>
+            <article><b>03</b><div><h3>Dapatkan respons</h3><p>10.000 suara mewajibkan respons resmi. 100.000 suara membuka pertimbangan sidang publik.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="transparency" id="transparansi">
+        <div><p class="kicker light">TRANSPARANSI PUBLIK</p><h2>Mandat publik,<br>terlihat oleh publik.</h2></div>
+        <div class="transparency-stat"><strong>99.8%</strong><span>tanda tangan lolos verifikasi identitas</span></div>
+        <div class="transparency-stat"><strong>14 hari</strong><span>rata-rata waktu respons lembaga</span></div>
+        <a href="#">Buka dashboard data <i data-lucide="arrow-up-right"></i></a>
+      </section>
+
+      <section class="final-cta">
+        <span class="kicker">SATU SUARA ADALAH PERMULAAN</span>
+        <h2>Apa yang ingin<br>kamu <em>ubah?</em></h2>
+        <button class="primary-btn large" id="bottomCreate">Mulai petisimu <i data-lucide="arrow-right"></i></button>
+        <p>Gratis. Terverifikasi. Terbuka untuk semua warga.</p>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="#top"><span class="brand-mark"><i data-lucide="landmark"></i></span><span class="brand-name">SUARA</span></a>
+      <p>Infrastruktur partisipasi publik yang independen, aman, dan transparan.</p>
+      <div><a href="#">Aksesibilitas</a><a href="#">Privasi</a><a href="#">Ketentuan</a><a href="#">Bantuan</a><a href="https://glenatron.artstation.com/projects/AJGbV" target="_blank" rel="noopener">3D: Glen Fox · CC BY</a></div>
+      <span>© 2026 SUARA</span>
+    </footer>
+
+    <dialog id="petitionModal">
+      <button class="modal-close" aria-label="Tutup"><i data-lucide="x"></i></button>
+      <p class="kicker">MULAI PERUBAHAN</p>
+      <h2>Buat petisi publik</h2>
+      <p>Ceritakan masalahnya. Kami akan membantu menyusun tuntutan yang jelas dan terukur.</p>
+      <label>Judul petisi<input placeholder="Contoh: Sediakan trotoar aman di..." /></label>
+      <label>Ditujukan kepada<input placeholder="Lembaga atau pengambil keputusan" /></label>
+      <button class="primary-btn modal-next">Lanjutkan <i data-lucide="arrow-right"></i></button>
+    </dialog>
+
+    <div class="toast" id="toast"><i data-lucide="check-circle-2"></i><div><strong>Dukunganmu tercatat</strong><span>Terima kasih sudah ikut bersuara.</span></div></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
