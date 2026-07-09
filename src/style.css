@@ -120,3 +120,149 @@ dialog input:focus,dialog select:focus,dialog textarea:focus,#petitionModal .qui
 .toast{border-left-color:var(--indo-red)}
 .toast svg{color:var(--indo-red)}
 @media(max-width:700px){.site-header.menu-open nav{background:#050a17}}
+
+
+/* GLASSMORPHISM SYSTEM */
+:root{
+  --glass-light:rgba(255,255,255,.62);
+  --glass-light-strong:rgba(255,255,255,.78);
+  --glass-dark:rgba(5,10,23,.58);
+  --glass-dark-strong:rgba(5,10,23,.76);
+  --glass-line:rgba(255,255,255,.34);
+  --glass-line-dark:rgba(255,255,255,.13);
+  --glass-shadow:0 24px 70px rgba(5,10,23,.16);
+  --glass-shadow-dark:0 28px 90px rgba(0,0,0,.3);
+}
+html{background:#050a17}
+body{background:radial-gradient(circle at 12% 18%,rgba(227,31,54,.16),transparent 27%),radial-gradient(circle at 88% 72%,rgba(255,255,255,.16),transparent 24%),linear-gradient(135deg,#e8e5e2,#f9f6f1 48%,#ead8da);background-attachment:fixed}
+.site-header,.portal-header,.solid-header{background:rgba(5,10,23,.54);border-bottom:1px solid rgba(255,255,255,.16);-webkit-backdrop-filter:blur(22px) saturate(145%);backdrop-filter:blur(22px) saturate(145%);box-shadow:0 14px 45px rgba(0,0,0,.13)}
+.brand-mark,.portal-mark{box-shadow:inset 0 1px rgba(255,255,255,.45),0 8px 28px rgba(227,31,54,.32),0 0 0 6px rgba(227,31,54,.09)}
+.primary-btn,.header-cta,.search-box button,.support-btn,.dash-actions button,.library-toolbar button,.modal-next{background:linear-gradient(135deg,rgba(255,70,87,.96),rgba(185,16,39,.92));border:1px solid rgba(255,255,255,.28);box-shadow:inset 0 1px rgba(255,255,255,.34),0 12px 30px rgba(143,23,41,.25);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.hero,.explore-hero,.library-hero,.detail-hero,.dash-hero{isolation:isolate}
+.search-box{background:rgba(255,255,255,.76);border:1px solid rgba(255,255,255,.72);box-shadow:inset 0 1px rgba(255,255,255,.78),0 24px 70px rgba(0,0,0,.24);-webkit-backdrop-filter:blur(24px) saturate(150%);backdrop-filter:blur(24px) saturate(150%)}
+.hero-meta div{margin-right:12px;padding:14px 24px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(5,10,23,.28);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.signal-strip{background:rgba(196,20,43,.84);border-block:1px solid rgba(255,255,255,.25);-webkit-backdrop-filter:blur(18px) saturate(145%);backdrop-filter:blur(18px) saturate(145%);box-shadow:0 15px 45px rgba(90,5,20,.2)}
+.petitions-section,.movement-feed,.library-content,.detail-layout,.related-section,.final-cta{background:linear-gradient(135deg,rgba(255,255,255,.72),rgba(248,244,239,.46));-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.petition-stage,.movement-card,.public-petition-card,.support-panel,.related-card,.dash-stats,.petition-table-wrap,.how-content,.detail-meta{background:var(--glass-light);border:1px solid var(--glass-line);box-shadow:inset 0 1px rgba(255,255,255,.72),var(--glass-shadow);-webkit-backdrop-filter:blur(24px) saturate(145%);backdrop-filter:blur(24px) saturate(145%)}
+.petition-stage{border-radius:24px;overflow:hidden}
+.petition-item{background:rgba(255,255,255,.22)}
+.petition-item:hover,.petition-item.active{background:rgba(255,255,255,.68)}
+.focus-card{background:linear-gradient(145deg,rgba(5,10,23,.77),rgba(78,8,22,.65));border:1px solid rgba(255,255,255,.14);-webkit-backdrop-filter:blur(24px) saturate(145%);backdrop-filter:blur(24px) saturate(145%)}
+.how-section{background:linear-gradient(135deg,rgba(245,238,237,.68),rgba(255,255,255,.42))}
+.how-visual{margin:24px;border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.55),rgba(238,207,211,.42));border:1px solid rgba(255,255,255,.65);box-shadow:inset 0 1px rgba(255,255,255,.8),var(--glass-shadow);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px)}
+.how-content{margin:24px 24px 24px 0;border-radius:28px}
+.rings{background:rgba(255,255,255,.68);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.transparency,.impact-timeline{margin:24px;border:1px solid rgba(255,255,255,.13);border-radius:28px;background:linear-gradient(135deg,rgba(5,10,23,.8),rgba(66,7,19,.68));box-shadow:inset 0 1px rgba(255,255,255,.13),var(--glass-shadow-dark);-webkit-backdrop-filter:blur(28px) saturate(145%);backdrop-filter:blur(28px) saturate(145%)}
+footer,.portal-footer{background:rgba(5,10,23,.8);border-top:1px solid rgba(255,255,255,.14);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px)}
+.explore-copy{padding:34px;border:1px solid rgba(255,255,255,.13);border-radius:26px;background:rgba(5,10,23,.43);box-shadow:inset 0 1px rgba(255,255,255,.11),var(--glass-shadow-dark);-webkit-backdrop-filter:blur(22px) saturate(140%);backdrop-filter:blur(22px) saturate(140%)}
+.explore-filters button{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.19);box-shadow:inset 0 1px rgba(255,255,255,.1);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.movement-card,.public-petition-card,.related-card{border-radius:20px;overflow:hidden}
+.movement-card:hover,.public-petition-card:hover,.related-card:hover{transform:translateY(-7px);background:rgba(255,255,255,.76);box-shadow:inset 0 1px white,0 30px 80px rgba(91,8,24,.18)}
+.dash-sidebar{margin:14px;border:1px solid rgba(255,255,255,.13);border-radius:24px;background:rgba(5,10,23,.76);box-shadow:inset 0 1px rgba(255,255,255,.12),var(--glass-shadow-dark);-webkit-backdrop-filter:blur(28px) saturate(145%);backdrop-filter:blur(28px) saturate(145%)}
+.dashboard-page{background:radial-gradient(circle at 85% 12%,rgba(227,31,54,.14),transparent 25%),linear-gradient(135deg,#e8e5e2,#f8f5f0)}
+.dash-topbar{margin-top:12px;padding:0 24px;border:1px solid rgba(255,255,255,.55);border-radius:18px;background:rgba(255,255,255,.46);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.dash-hero{margin-top:16px;border:1px solid rgba(255,255,255,.15);border-radius:26px;background:radial-gradient(circle at 77% 40%,rgba(227,31,54,.31),transparent 30%),linear-gradient(125deg,rgba(7,18,37,.87),rgba(76,9,23,.72));box-shadow:inset 0 1px rgba(255,255,255,.14),var(--glass-shadow-dark);-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px)}
+.dash-hero:after{background:linear-gradient(90deg,rgba(5,10,23,.95) 15%,rgba(55,8,20,.68) 54%,transparent 82%)}
+.dash-stats{border-radius:20px;overflow:hidden}
+.dash-stats article{background:rgba(255,255,255,.28)}
+.petition-manager{padding:28px;border:1px solid rgba(255,255,255,.58);border-radius:26px;background:rgba(255,255,255,.42);box-shadow:inset 0 1px rgba(255,255,255,.72),var(--glass-shadow);-webkit-backdrop-filter:blur(26px) saturate(145%);backdrop-filter:blur(26px) saturate(145%)}
+.manager-tools label,.manager-tools select,.form-grid input,.form-grid select,.form-grid textarea{background:rgba(255,255,255,.62);border-color:rgba(255,255,255,.7);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.petition-table-wrap{border-radius:18px}
+.petition-table-wrap tr:hover td{background:rgba(255,255,255,.62)}
+.library-toolbar{padding:16px;border:1px solid rgba(255,255,255,.62);border-radius:20px;background:rgba(255,255,255,.46);box-shadow:inset 0 1px rgba(255,255,255,.76),var(--glass-shadow);-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px)}
+.library-toolbar input,.library-toolbar select{background:rgba(255,255,255,.64)}
+.petition-detail-page .detail-main{padding:32px;border:1px solid rgba(255,255,255,.13);border-radius:26px;background:rgba(5,10,23,.43);box-shadow:inset 0 1px rgba(255,255,255,.11),var(--glass-shadow-dark);-webkit-backdrop-filter:blur(22px) saturate(140%);backdrop-filter:blur(22px) saturate(140%)}
+.support-panel{border-radius:22px;background:rgba(255,255,255,.72)}
+.detail-meta{border-radius:16px;overflow:hidden}
+dialog,.editor-dialog,.delete-dialog{background:rgba(248,246,242,.78);border:1px solid rgba(255,255,255,.72);box-shadow:inset 0 1px white,0 40px 120px rgba(0,0,0,.35);-webkit-backdrop-filter:blur(30px) saturate(150%);backdrop-filter:blur(30px) saturate(150%)}
+dialog::backdrop,.editor-dialog::backdrop,.delete-dialog::backdrop{background:rgba(5,10,23,.56);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.toast,.portal-toast{background:rgba(5,10,23,.78);border:1px solid rgba(255,255,255,.14);box-shadow:inset 0 1px rgba(255,255,255,.13),var(--glass-shadow-dark);-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px)}
+@media(max-width:980px){.dash-sidebar{margin:8px}.petition-manager{padding:20px}.explore-copy{padding:26px}}
+@media(max-width:700px){.site-header,.portal-header,.solid-header{-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}.hero-meta div{padding:10px 12px;margin-right:6px}.how-visual,.how-content,.transparency,.impact-timeline{margin:12px;border-radius:20px}.how-content{padding:70px 24px}.dash-sidebar{margin:0;border-radius:18px 18px 0 0}.dash-topbar{margin-top:8px;padding:0 14px}.petition-manager{padding:16px;border-radius:20px}.petition-detail-page .detail-main{padding:22px;border-radius:20px}.explore-copy{padding:22px;border-radius:20px}}
+.signal-sphere{border-color:rgba(227,31,54,.32);box-shadow:inset 0 0 85px rgba(227,31,54,.14),0 0 90px rgba(143,23,41,.14);background:rgba(5,10,23,.18);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+.signal-sphere:before,.signal-sphere:after{border-color:rgba(255,255,255,.24)}
+.signal-sphere i{background:var(--indo-red);box-shadow:0 0 14px var(--indo-red)}
+.signal-sphere span{background:radial-gradient(circle at 35% 30%,#fffaf6,#e31f36 46%,#7b1021);box-shadow:inset 0 1px rgba(255,255,255,.7),0 0 50px rgba(227,31,54,.34)}
+/* PERFORMANCE GLASS — focused blur, composited light leaks */
+:root{--glass-blur:14px;--glass-edge:rgba(255,255,255,.58);--leak-red:rgba(255,35,66,.22);--leak-white:rgba(255,255,255,.72)}
+.cursor-glow{left:0;top:0;width:340px;height:340px;filter:none;background:radial-gradient(circle,rgba(227,31,54,.13) 0,rgba(227,31,54,.045) 42%,transparent 72%);transform:translate3d(calc(var(--cursor-x,50vw) - 170px),calc(var(--cursor-y,50vh) - 170px),0);will-change:transform}
+.site-header,.portal-header,.solid-header{-webkit-backdrop-filter:blur(16px) saturate(130%);backdrop-filter:blur(16px) saturate(130%)}
+.petitions-section,.movement-feed,.library-content,.detail-layout,.related-section,.final-cta{-webkit-backdrop-filter:none;backdrop-filter:none;background-color:rgba(247,244,240,.84);background-image:radial-gradient(circle at 8% 16%,var(--leak-red),transparent 25%),radial-gradient(circle at 91% 72%,rgba(255,255,255,.9),transparent 28%),linear-gradient(135deg,rgba(255,255,255,.42),rgba(244,224,228,.22))}
+.petitions-section,.how-section,.movement-feed,.impact-timeline,.library-content,.detail-layout,.related-section,.final-cta{content-visibility:auto;contain-intrinsic-size:auto 760px}
+.section-head,.feed-heading,.library-summary,.timeline-intro{padding:28px 30px;border:1px solid var(--glass-edge);border-radius:24px;background:linear-gradient(135deg,rgba(255,255,255,.5),rgba(255,255,255,.22));box-shadow:inset 0 1px rgba(255,255,255,.9),0 20px 55px rgba(59,10,23,.11);-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(125%);backdrop-filter:blur(var(--glass-blur)) saturate(125%)}
+.section-head{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr);align-items:end;margin-bottom:34px}
+.section-head h2{max-width:780px;text-wrap:balance}
+.petition-stage{min-height:640px;background:linear-gradient(135deg,rgba(255,255,255,.58),rgba(255,255,255,.28));-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(125%);backdrop-filter:blur(var(--glass-blur)) saturate(125%)}
+.petition-list{display:flex;flex-direction:column;min-width:0}
+.petition-item{flex:1;min-height:130px;align-items:center;padding-block:22px;background:rgba(255,255,255,.2)}
+.petition-item:hover,.petition-item.active{background:linear-gradient(100deg,rgba(255,255,255,.82),rgba(255,224,229,.46))}
+.petition-item>div:last-child{align-self:center}
+.focus-card{box-shadow:inset 1px 0 rgba(255,255,255,.13),inset 0 1px rgba(255,255,255,.14),-20px 0 80px rgba(123,13,33,.12);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.petition-stage,.movement-card,.public-petition-card,.support-panel,.related-card,.dash-stats,.petition-table-wrap,.how-content,.detail-meta{background-image:radial-gradient(circle at 88% 8%,rgba(255,255,255,.9),transparent 27%),linear-gradient(145deg,rgba(255,255,255,.62),rgba(255,255,255,.28));-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(125%);backdrop-filter:blur(var(--glass-blur)) saturate(125%)}
+.movement-card,.public-petition-card,.related-card,.support-panel,.petition-table-wrap{contain:layout paint}
+.library-toolbar,.dash-topbar,.petition-manager,.manager-tools label,.manager-tools select,.form-grid input,.form-grid select,.form-grid textarea{-webkit-backdrop-filter:blur(12px) saturate(120%);backdrop-filter:blur(12px) saturate(120%)}
+.explore-copy,.petition-detail-page .detail-main,.transparency,.impact-timeline,.dash-sidebar,.dash-hero{-webkit-backdrop-filter:blur(14px) saturate(125%);backdrop-filter:blur(14px) saturate(125%)}
+.library-hero,.explore-hero,.detail-hero,.dash-hero,.hero{background-image:radial-gradient(circle at 79% 22%,rgba(255,72,96,.27),transparent 24%),radial-gradient(circle at 51% 88%,rgba(255,255,255,.1),transparent 31%),linear-gradient(128deg,#050a17,#101b31 57%,#4d0918)}
+.library-toolbar,.dash-topbar,.petition-manager,.support-panel,dialog,.editor-dialog,.delete-dialog{box-shadow:inset 0 1px rgba(255,255,255,.9),inset 0 0 0 1px rgba(255,255,255,.3),0 24px 64px rgba(63,8,21,.15)}
+@media(max-width:1000px){.section-head{grid-template-columns:1fr}.head-side{max-width:none}.petition-stage{grid-template-columns:1fr}.petition-list{border-right:0}.petition-item{min-height:118px;flex:none}}
+@media(max-width:700px){.section-head,.feed-heading,.library-summary,.timeline-intro{padding:20px;border-radius:18px}.section-head h2{font-size:46px}.cursor-glow{display:none}.petition-stage{min-height:0}.petition-item{min-height:112px}.site-header,.portal-header,.solid-header{-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker-track,.rings span,.movement-model span,.movement-model span:before,.movement-model span:after{animation:none!important}.movement-card,.public-petition-card,.related-card{transition:none!important}}
+/* GLASS REWORK V2 — vivid light leaks and layered depth */
+:root{
+  --leak-crimson:rgba(255,31,69,.54);
+  --leak-rose:rgba(255,118,149,.38);
+  --leak-ice:rgba(89,183,255,.34);
+  --leak-gold:rgba(255,184,77,.28);
+  --leak-violet:rgba(151,104,255,.22);
+  --glass-surface:rgba(255,255,255,.32);
+  --glass-surface-strong:rgba(255,255,255,.48);
+  --glass-border:rgba(255,255,255,.74);
+  --shadow-float:0 34px 90px rgba(66,8,23,.2),0 12px 34px rgba(5,10,23,.14),inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(255,255,255,.22);
+  --shadow-soft:0 18px 45px rgba(71,11,26,.15),0 5px 14px rgba(5,10,23,.1),inset 0 1px rgba(255,255,255,.92);
+  --shadow-red:0 24px 55px rgba(178,10,38,.34),0 7px 20px rgba(59,4,16,.24),inset 0 1px rgba(255,255,255,.46);
+}
+body{background:radial-gradient(ellipse 58% 48% at -8% 12%,var(--leak-crimson),transparent 70%),radial-gradient(ellipse 48% 44% at 105% 26%,var(--leak-ice),transparent 68%),radial-gradient(ellipse 46% 42% at 70% 102%,var(--leak-gold),transparent 70%),linear-gradient(135deg,#dfd4dc 0%,#f8f4f2 45%,#dce9f4 100%);background-attachment:fixed}
+.hero:before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(circle at 73% 28%,rgba(255,39,76,.42),transparent 25%),radial-gradient(circle at 88% 67%,rgba(87,190,255,.25),transparent 25%),radial-gradient(circle at 52% 88%,rgba(255,192,104,.17),transparent 30%);mix-blend-mode:screen}
+.petitions-section{background-image:radial-gradient(ellipse 52% 38% at -5% 8%,rgba(255,29,70,.5),transparent 70%),radial-gradient(ellipse 42% 37% at 103% 38%,rgba(82,182,255,.38),transparent 70%),radial-gradient(ellipse 45% 35% at 58% 105%,rgba(255,181,84,.29),transparent 72%),linear-gradient(145deg,#e4d7dd 0%,#f7f3f0 48%,#dce8f2 100%)}
+.movement-feed,.library-content,.related-section{background-image:radial-gradient(ellipse 48% 42% at 3% 22%,rgba(255,47,82,.43),transparent 70%),radial-gradient(ellipse 42% 40% at 94% 9%,rgba(124,96,255,.24),transparent 70%),radial-gradient(ellipse 45% 38% at 78% 100%,rgba(255,187,84,.25),transparent 72%),linear-gradient(140deg,#e2d8df,#f8f4f1 50%,#d9e8f3)}
+.detail-layout,.final-cta{background-image:radial-gradient(ellipse 50% 42% at -2% 10%,rgba(255,36,73,.4),transparent 70%),radial-gradient(ellipse 44% 40% at 102% 54%,rgba(76,188,255,.32),transparent 70%),linear-gradient(140deg,#e4d9df,#faf6f3 55%,#dde9f2)}
+.dashboard-page{background:radial-gradient(ellipse 55% 42% at 7% 0%,rgba(255,36,73,.42),transparent 70%),radial-gradient(ellipse 45% 38% at 98% 35%,rgba(86,184,255,.31),transparent 68%),radial-gradient(ellipse 44% 38% at 67% 105%,rgba(255,181,75,.24),transparent 72%),linear-gradient(145deg,#ddd3db,#f8f4f1 50%,#dbe8f2)}
+.section-head,.feed-heading,.library-summary,.timeline-intro,.library-toolbar,.dash-topbar,.petition-manager,.support-panel,.detail-story{border:1px solid var(--glass-border);background:linear-gradient(135deg,rgba(255,255,255,.47),rgba(255,255,255,.18));box-shadow:var(--shadow-float);-webkit-backdrop-filter:blur(20px) saturate(145%);backdrop-filter:blur(20px) saturate(145%)}
+.section-head,.feed-heading{position:relative;overflow:hidden}
+.section-head:after,.feed-heading:after{content:"";position:absolute;width:310px;height:210px;right:-90px;top:-100px;border-radius:50%;background:radial-gradient(circle,rgba(255,47,86,.32),transparent 68%);pointer-events:none}
+.search-box{padding:6px;border-radius:18px;background:linear-gradient(135deg,rgba(255,255,255,.3),rgba(255,255,255,.12));border:1px solid rgba(255,255,255,.48);box-shadow:0 30px 80px rgba(0,0,0,.34),0 0 55px rgba(227,31,54,.14),inset 0 1px rgba(255,255,255,.7);-webkit-backdrop-filter:blur(20px) saturate(145%);backdrop-filter:blur(20px) saturate(145%)}
+.search-box input{background:rgba(255,255,255,.87);border:1px solid rgba(255,255,255,.86);border-radius:12px;padding:16px;color:#07120f;box-shadow:inset 0 1px 2px rgba(5,10,23,.07)}
+.search-box>svg{color:white;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+.search-box button,.primary-btn,.header-cta,.support-btn,.dash-actions button,.modal-next{border-radius:12px;background:linear-gradient(135deg,rgba(255,73,101,.94),rgba(190,13,43,.86));border:1px solid rgba(255,255,255,.48);box-shadow:var(--shadow-red);-webkit-backdrop-filter:blur(14px) saturate(145%);backdrop-filter:blur(14px) saturate(145%)}
+.search-box button:hover,.primary-btn:hover,.header-cta:hover,.support-btn:hover{background:linear-gradient(135deg,#ff6c85,#d7153d);box-shadow:0 32px 70px rgba(198,12,47,.42),0 0 34px rgba(255,92,118,.28),inset 0 1px rgba(255,255,255,.6);transform:translateY(-3px)}
+.filters button,.explore-filters button,.library-toolbar select,.library-search,.manager-tools label,.manager-tools select{background:rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.7);box-shadow:0 10px 28px rgba(50,8,18,.1),inset 0 1px rgba(255,255,255,.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.filters button.active,.filters button:hover,.explore-filters button.active,.explore-filters button:hover{background:linear-gradient(135deg,rgba(255,75,103,.93),rgba(188,12,41,.85));border-color:rgba(255,255,255,.58);box-shadow:0 15px 34px rgba(174,10,39,.3),inset 0 1px rgba(255,255,255,.5);color:white}
+.petition-stage{padding:16px;gap:16px;border:1px solid rgba(255,255,255,.66);border-radius:30px;background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.08));box-shadow:var(--shadow-float);overflow:visible;-webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%)}
+.petition-list{gap:12px;border:0;background:transparent}
+.petition-item{min-height:0;padding:20px 22px;border:1px solid rgba(255,255,255,.78)!important;border-radius:18px;background:linear-gradient(118deg,rgba(255,255,255,.5),rgba(255,255,255,.2));box-shadow:var(--shadow-soft);-webkit-backdrop-filter:blur(18px) saturate(145%);backdrop-filter:blur(18px) saturate(145%);overflow:hidden}
+.petition-item:before{content:"";position:absolute;width:180px;height:120px;left:-80px;top:-70px;border-radius:50%;background:radial-gradient(circle,rgba(255,64,96,.24),transparent 70%);pointer-events:none}
+.petition-item:hover,.petition-item.active{padding-left:28px;background:linear-gradient(110deg,rgba(255,255,255,.72),rgba(255,220,227,.29));box-shadow:0 24px 58px rgba(111,10,31,.22),0 7px 20px rgba(5,10,23,.11),inset 0 1px white;transform:translateX(6px)}
+.focus-card{border-radius:20px;border:1px solid rgba(255,255,255,.22);box-shadow:0 38px 90px rgba(48,5,18,.38),0 16px 44px rgba(164,12,43,.2),inset 0 1px rgba(255,255,255,.22);overflow:hidden}
+.movement-card,.public-petition-card,.related-card,.dash-stats,.petition-table-wrap,.how-content,.detail-meta{border:1px solid rgba(255,255,255,.76);background:linear-gradient(145deg,rgba(255,255,255,.47),rgba(255,255,255,.17));box-shadow:var(--shadow-soft);-webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%)}
+.movement-card:hover,.public-petition-card:hover,.related-card:hover{transform:translateY(-9px) scale(1.01);background:linear-gradient(145deg,rgba(255,255,255,.64),rgba(255,225,230,.25));box-shadow:0 38px 90px rgba(99,9,28,.24),0 12px 30px rgba(5,10,23,.13),inset 0 1px white}
+.detail-story{padding:34px;border-radius:26px}
+.detail-meta{padding:8px 18px}
+.dash-stats{gap:10px;padding:10px;background:rgba(255,255,255,.2)}
+.dash-stats article{border-radius:14px;border:1px solid rgba(255,255,255,.62);box-shadow:0 12px 30px rgba(44,8,19,.1),inset 0 1px rgba(255,255,255,.82)}
+.petition-table-wrap{padding:10px}
+.petition-table-wrap tr td{background:rgba(255,255,255,.2);border-bottom:8px solid transparent;background-clip:padding-box}
+footer,.portal-footer{margin:24px;border:1px solid rgba(255,255,255,.16);border-radius:26px;background:linear-gradient(135deg,rgba(5,10,23,.88),rgba(80,8,24,.72));box-shadow:0 35px 90px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.16);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+@media(max-width:1000px){.petition-stage{padding:12px}.petition-item:hover,.petition-item.active{transform:none}.detail-story{padding:26px}}
+@media(max-width:700px){.petition-stage{padding:8px;border-radius:22px}.petition-list{gap:8px}.petition-item{padding:18px 14px;border-radius:14px}.petition-item:hover,.petition-item.active{padding-left:18px}.search-box{background:rgba(255,255,255,.16);padding:5px}.search-box>svg{color:#6b7572}.detail-story{padding:21px}.section-head,.feed-heading{box-shadow:0 20px 50px rgba(66,8,23,.18),inset 0 1px white}footer,.portal-footer{margin:10px;border-radius:20px}}
+/* LAYOUT FIX — stable cards and footer */
+.petition-list{justify-content:flex-start;align-content:flex-start}
+.petition-item{flex:0 0 auto;min-height:130px}
+body{min-height:100vh}
+body>main{min-width:0}
+footer,.portal-footer{width:calc(100% - 48px);margin:24px auto;padding:34px clamp(24px,4vw,58px);gap:clamp(20px,3vw,48px);overflow:hidden}
+footer{grid-template-columns:minmax(170px,.8fr) minmax(220px,1.15fr) minmax(360px,1.75fr) auto}
+footer>*,.portal-footer>*{min-width:0}
+footer>div{justify-content:center;flex-wrap:wrap;row-gap:10px}
+footer>span,.portal-footer>span{justify-self:end;white-space:nowrap}
+@media(max-width:1000px){footer{grid-template-columns:1fr auto}footer>div{grid-column:1/-1;justify-content:flex-start}.portal-footer{grid-template-columns:1fr auto}.portal-footer>p{grid-column:1/-1;margin:0}}
+@media(max-width:700px){.petition-item{min-height:112px}footer,.portal-footer{width:calc(100% - 20px);margin:10px auto;grid-template-columns:1fr;padding:28px 22px}footer>div{grid-column:auto}.portal-footer>p{grid-column:auto}footer>span,.portal-footer>span{justify-self:start}}
