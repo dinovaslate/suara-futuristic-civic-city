@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#071425" /><meta name="description" content="Detail konsultasi kebijakan publik SUARA." /><title>Konsultasi — SUARA</title></head>
+<body>
+  <header class="site-header"><div class="header-inner"><a class="site-brand" href="/"><span class="brand-mark"><i data-lucide="landmark"></i></span><span class="brand-name">SUARA</span><span class="brand-sub">Konsultasi Kebijakan Publik</span></a><nav class="main-nav" data-main-nav aria-label="Navigasi utama"><a data-nav-page="consultations.html" href="/consultations.html">Konsultasi Terbuka</a><a href="/#cara-kerja">Cara Kerja</a><a href="?id=blok-m-lez&tab=discussion">Ruang Musyawarah</a><a href="?id=blok-m-lez&tab=outcome">Hasil & Tindak Lanjut</a><a data-nav-page="my-responses.html" href="/my-responses.html">Masukan Saya</a></nav><div class="header-actions"><a class="header-cta" href="?id=blok-m-lez&tab=questions">Berikan tanggapan <i data-lucide="arrow-right"></i></a><button class="menu-toggle" data-menu-toggle aria-label="Buka menu" aria-expanded="false"><i data-lucide="menu"></i></button></div></div></header>
+  <div class="prototype-strip"><div><i data-lucide="alert-triangle"></i><strong>Simulasi konsultasi.</strong><span>Rancangan ini bukan dokumen resmi dan tidak menerima masukan pemerintah yang sebenarnya.</span></div></div>
+  <main>
+    <header class="detail-header">
+      <div class="detail-header-inner">
+        <nav class="breadcrumbs"><a href="/consultations.html">Konsultasi</a><i data-lucide="chevron-right"></i><span id="crumbTopic"></span><i data-lucide="chevron-right"></i><span>Detail</span></nav>
+        <div class="detail-title-grid"><div class="detail-title"><span class="status-badge is-open" id="detailStatus"><i></i></span><h1 id="detailTitle"></h1><p id="detailInstitution"></p></div><div class="detail-meta" id="detailMeta"></div></div>
+      </div>
+      <div class="process-stepper" id="processStepper" tabindex="0" aria-label="Tahap konsultasi; gulir horizontal untuk melihat seluruh tahap"></div>
+    </header>
+    <div class="consultation-tabs-wrap"><div class="consultation-tabs" role="tablist" aria-label="Bagian konsultasi">
+      <button role="tab" data-tab="summary">Ringkasan</button><button role="tab" data-tab="documents">Dokumen & Pasal</button><button role="tab" data-tab="questions">Pertanyaan Konsultasi</button><button role="tab" data-tab="public">Masukan Publik</button><button role="tab" data-tab="discussion">Ruang Musyawarah</button><button role="tab" data-tab="outcome">Respons Instansi</button><button role="tab" data-tab="history">Riwayat Perubahan</button>
+    </div></div>
+    <div class="detail-content">
+      <section class="tab-panel" id="panel-summary" role="tabpanel"></section>
+      <section class="tab-panel" id="panel-documents" role="tabpanel"></section>
+      <section class="tab-panel" id="panel-questions" role="tabpanel"></section>
+      <section class="tab-panel" id="panel-public" role="tabpanel"></section>
+      <section class="tab-panel" id="panel-discussion" role="tabpanel"></section>
+      <section class="tab-panel" id="panel-outcome" role="tabpanel"></section>
+      <section class="tab-panel" id="panel-history" role="tabpanel"></section>
+    </div>
+  </main>
+  <footer class="site-footer"><a class="site-brand" href="/"><span class="brand-mark"><i data-lucide="landmark"></i></span><span class="brand-name">SUARA</span></a><p class="footer-copy">Skenario menggunakan konteks kebijakan Jakarta yang nyata. Draft, pertanyaan, respons, dan hasil yang ditampilkan adalah simulasi.</p><p class="footer-meta">Data simulasi prototipe<br>© 2026 SUARA</p></footer>
+  <script type="module" src="/src/consultation.js"></script>
+</body>
+</html>

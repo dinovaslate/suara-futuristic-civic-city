@@ -1,18 +1,23 @@
 {
-  "name": "suara-civic-petition",
+  "name": "suara-public-consultation",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test",
+    "test:e2e": "playwright test",
+    "test:all": "npm test && npm run build && npm run test:e2e"
   },
   "dependencies": {
     "lucide": "^0.468.0",
     "three": "^0.171.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.61.1",
     "vite": "^6.0.5"
   }
 }

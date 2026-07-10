@@ -1,183 +1,94 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#e31f36" />
-    <meta name="description" content="SUARA â€” ruang petisi publik untuk mengubah dukungan menjadi kebijakan." />
-    <title>SUARA â€” Petisi Publik</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div class="noise" aria-hidden="true"></div>
-    <div class="cursor-glow" aria-hidden="true"></div>
-
-    <header class="site-header">
-      <a class="brand" href="/" aria-label="SUARA beranda">
-        <span class="brand-mark"><i data-lucide="landmark"></i></span>
-        <span class="brand-name">SUARA</span>
-        <span class="brand-divider"></span>
-        <span class="brand-sub">Ruang Petisi Publik</span>
-      </a>
-      <nav aria-label="Navigasi utama">
-        <a href="/explore.html">Jelajahi</a>
-        <a href="/petitions.html">Semua petisi</a>
-        <a href="#cara-kerja">Cara kerja</a>
-        <a href="/dashboard.html">Dashboard</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#071425" />
+  <meta name="description" content="SUARA — prototipe konsultasi kebijakan publik yang membantu warga memahami, menanggapi, dan melacak perubahan kebijakan." />
+  <title>SUARA — Konsultasi Kebijakan Publik</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-brand" href="/" aria-label="SUARA beranda"><span class="brand-mark"><i data-lucide="landmark"></i></span><span class="brand-name">SUARA</span><span class="brand-sub">Konsultasi Kebijakan Publik</span></a>
+      <nav class="main-nav" data-main-nav aria-label="Navigasi utama">
+        <a data-nav-page="consultations.html" href="/consultations.html">Konsultasi Terbuka</a>
+        <a href="/#cara-kerja">Cara Kerja</a>
+        <a href="/consultation.html?id=blok-m-lez&tab=discussion">Ruang Musyawarah</a>
+        <a href="/consultation.html?id=blok-m-lez&tab=outcome">Hasil & Tindak Lanjut</a>
+        <a data-nav-page="my-responses.html" href="/my-responses.html">Masukan Saya</a>
       </nav>
-      <div class="header-actions">
-        <button class="text-btn" id="loginBtn"><i data-lucide="circle-user-round"></i> Masuk</button>
-        <button class="primary-btn compact" id="createPetition"><i data-lucide="plus"></i> Mulai petisi</button>
-        <button class="menu-btn" aria-label="Buka menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+      <div class="header-actions"><a class="header-cta" href="/consultations.html">Lihat konsultasi <i data-lucide="arrow-right"></i></a><button class="menu-toggle" data-menu-toggle aria-label="Buka menu" aria-expanded="false"><i data-lucide="menu"></i></button></div>
+    </div>
+  </header>
+  <div class="prototype-strip"><div><i data-lucide="info"></i><strong>Prototipe layanan.</strong><span>Bukan kanal resmi pemerintah. Seluruh konsultasi dan statistik adalah simulasi.</span></div></div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-map" id="heroMap" role="img" aria-label="Visualisasi tiga dimensi konteks kebijakan perkotaan Jakarta"></div>
+      <div class="hero-inner">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow">Platform konsultasi kebijakan publik</p>
+          <h1>Kebijakan publik,<br><em>dibahas sebelum ditetapkan.</em></h1>
+          <p>Baca ringkasan kebijakan, jawab pertanyaan konsultasi, sampaikan dampak yang Anda alami, dan lihat bagaimana instansi menanggapi masukan masyarakat.</p>
+          <div class="hero-actions"><a class="primary-button" href="/consultations.html">Lihat konsultasi terbuka <i data-lucide="arrow-right"></i></a><a class="secondary-button" href="#cara-kerja">Pelajari cara kerja</a></div>
+          <form class="hero-search" id="heroSearch"><label><i data-lucide="search"></i><input id="heroSearchInput" type="search" placeholder="Cari kebijakan, instansi, wilayah, atau topik..." aria-label="Cari konsultasi" /></label><button type="submit">Cari kebijakan</button></form>
+        </div>
       </div>
-    </header>
+      <div class="map-overlay"><strong>Konteks kota — simulasi</strong>Visual 3D membantu menjelaskan dampak wilayah. Bukan peta batas resmi atau alat navigasi.</div>
+    </section>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-canvas" id="three-container" aria-hidden="true"></div>
-        <div class="hero-vignette"></div>
-        <div class="hero-grid"></div>
+    <section class="trust-row" aria-label="Prinsip layanan">
+      <div class="trust-row-inner" data-reveal>
+        <div class="trust-item"><i data-lucide="file-text"></i><span>Rancangan dan dokumen pendukung</span></div>
+        <div class="trust-item"><i data-lucide="list-checks"></i><span>Pertanyaan konsultasi terarah</span></div>
+        <div class="trust-item"><i data-lucide="message-square-text"></i><span>Tanggapan instansi dapat ditelusuri</span></div>
+        <div class="trust-item"><i data-lucide="git-compare-arrows"></i><span>Riwayat perubahan kebijakan</span></div>
+      </div>
+    </section>
 
-        <div class="live-badge"><span></span> 2.418 orang sedang bersuara</div>
+    <section class="section featured-section">
+      <div class="section-inner">
+        <div class="section-heading" data-reveal><div><p class="section-kicker">Konsultasi utama</p><h2>Satu kebijakan.<br>Satu alur yang utuh.</h2></div><p>Alih-alih menampilkan banyak kampanye dangkal, prototipe ini menunjukkan satu proses konsultasi dari rancangan hingga perubahan kebijakan.</p></div>
+        <article class="featured-consultation" id="featuredConsultation" data-reveal></article>
+      </div>
+    </section>
 
-        <div class="hero-copy">
-          <div class="eyebrow"><span>Platform partisipasi publik</span><span class="line"></span><span>Indonesia</span></div>
-          <h1 id="hero-title">Suara kecil.<br><em>Dampak besar.</em></h1>
-          <p>Temukan, dukung, dan mulai perubahan yang penting. Setiap tanda tangan adalah mandat publik yang tercatat.</p>
+    <section class="section" style="padding-top:0">
+      <div class="section-inner"><div class="legal-banner" data-reveal><span class="legal-icon"><i data-lucide="scale"></i></span><div><h3>Dasar partisipasi bermakna</h3><p>Dirancang selaras dengan penguatan partisipasi masyarakat dalam UU No. 13 Tahun 2022 dan prinsip hak untuk didengar, dipertimbangkan, serta memperoleh penjelasan dalam Putusan MK No. 91/PUU-XVIII/2020.</p></div><a class="secondary-button" href="https://peraturan.bpk.go.id/Details/212810/uu-no-13-tahun-2022" target="_blank" rel="noreferrer">Pelajari dasar hukum <i data-lucide="external-link"></i></a></div></div>
+    </section>
 
-          <form class="search-box" id="heroSearch">
-            <i data-lucide="search"></i>
-            <input id="searchInput" type="search" placeholder="Cari isu yang ingin kamu ubah..." aria-label="Cari petisi" autocomplete="off" />
-            <button type="submit">Cari petisi <i data-lucide="arrow-right"></i></button>
-          </form>
-
-          <div class="hero-meta">
-            <div><strong data-count="18427">0</strong><span>petisi aktif</span></div>
-            <div><strong data-count="3200000" data-short="true">0</strong><span>tanda tangan terverifikasi</span></div>
-            <div><strong data-count="327">0</strong><span>perubahan tercapai</span></div>
-          </div>
+    <section class="section process-section" id="cara-kerja">
+      <div class="section-inner">
+        <div class="section-heading" data-reveal><div><p class="section-kicker">Pahami. Tanggapi. Telusuri.</p><h2>Partisipasi bukan akhir dari proses.</h2></div><p>Masukan yang bermakna memerlukan informasi yang jelas, ruang untuk menjelaskan dampak, pertimbangan instansi, dan jawaban yang dapat diperiksa.</p></div>
+        <div class="process-grid" data-reveal>
+          <article class="process-step"><span>01</span><h3>Rancangan diterbitkan</h3><p>Instansi menjelaskan proposal, bukti, batas konsultasi, dan siapa yang terdampak.</p></article>
+          <article class="process-step"><span>02</span><h3>Warga memahami</h3><p>Teks rancangan dibaca bersama ringkasan sederhana dan konteks dampaknya.</p></article>
+          <article class="process-step"><span>03</span><h3>Masukan diberikan</h3><p>Pertanyaan terarah menangkap posisi, pengalaman, alternatif, dan bukti.</p></article>
+          <article class="process-step"><span>04</span><h3>Instansi menjelaskan</h3><p>Isu utama ditanggapi dengan keputusan dan alasan, termasuk masukan yang ditolak.</p></article>
+          <article class="process-step"><span>05</span><h3>Perubahan terlihat</h3><p>Versi sebelum dan sesudah dibandingkan agar dampak partisipasi dapat ditelusuri.</p></article>
         </div>
+      </div>
+    </section>
 
-        <div class="scene-label label-one"><span></span><b>01</b> Dukungan publik</div>
-        <div class="scene-label label-two"><span></span><b>02</b> Respons pemerintah</div>
-        <div class="scene-label label-three"><span></span><b>03</b> Agenda sidang</div>
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-heading" data-reveal><div><p class="section-kicker">Jelajahi proses</p><h2>Kebijakan pada tahap yang berbeda.</h2></div><p>Status menunjukkan tahap pengambilan keputusan, bukan tingkat popularitas. Semua kartu menggunakan data simulasi untuk demonstrasi.</p></div>
+        <div class="consultation-grid" id="homeConsultationGrid" data-reveal></div>
+      </div>
+    </section>
 
-        <a class="scroll-cue" href="#petisi"><span>Jelajahi gerakan</span><i data-lucide="arrow-down"></i></a>
-      </section>
+    <section class="section" style="padding-top:0">
+      <div class="section-inner">
+        <article class="outcome-preview" data-reveal>
+          <div class="outcome-intro"><p class="section-kicker">Akuntabilitas yang terlihat</p><h2>Apa yang terjadi setelah warga menjawab?</h2><p>SUARA menempatkan hasil dan alasan keputusan sebagai payoff utama partisipasi.</p><div class="rights-list"><div><strong>Didengar</strong><span>Masukan dicatat berdasarkan isu dan kelompok terdampak.</span></div><div><strong>Dipertimbangkan</strong><span>Instansi menjelaskan bukti dan analisis yang digunakan.</span></div><div><strong>Dijelaskan</strong><span>Keputusan, alasan, dan perubahan rancangan dipublikasikan.</span></div></div></div>
+          <div class="outcome-example"><p class="section-kicker">Contoh hasil simulasi</p><h3 style="font:700 27px var(--font-head);margin:0">Keterjangkauan pekerja shift</h3><div class="mini-response"><div><small>Apa yang kami dengar</small><strong>418 respons meminta batas tarif harian.</strong></div><div><small>Pertimbangan instansi</small><strong>Angkutan malam belum tersedia merata untuk seluruh jadwal kerja.</strong></div><div><small>Perubahan pada rancangan</small><strong>Batas tarif harian dan izin pekerja shift ditambahkan.</strong></div></div><a class="text-button" href="/consultation.html?id=blok-m-lez&tab=outcome">Lihat respons lengkap <i data-lucide="arrow-right"></i></a></div>
+        </article>
+      </div>
+    </section>
+  </main>
 
-      <section class="signal-strip" aria-label="Aktivitas terkini">
-        <div class="ticker-label"><span></span> LIVE</div>
-        <div class="ticker-window">
-          <div class="ticker-track">
-            <span><b>+128</b> dukungan untuk Transportasi Publik Aman</span><i></i>
-            <span><b>Bandung</b> baru saja melewati 50.000 suara</span><i></i>
-            <span><b>3 menit lalu</b> petisi Perlindungan Hutan mendapat respons</span><i></i>
-            <span><b>+128</b> dukungan untuk Transportasi Publik Aman</span><i></i>
-          </div>
-        </div>
-      </section>
-
-      <section class="petitions-section" id="petisi">
-        <div class="section-head">
-          <div>
-            <p class="kicker">GERAKAN HARI INI</p>
-            <h2>Yang sedang<br><span>diperjuangkan.</span></h2>
-          </div>
-          <div class="head-side">
-            <p>Petisi dengan momentum tertinggi dalam 24 jam terakhir. Dukunganmu menentukan apa yang dibahas selanjutnya.</p>
-            <div class="filters" role="group" aria-label="Filter petisi">
-              <button class="active" data-filter="all">Terpopuler</button>
-              <button data-filter="baru">Terbaru</button>
-              <button data-filter="mendesak">Mendesak</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="petition-stage">
-          <div class="petition-list" id="petitionList"></div>
-          <aside class="focus-card" id="focusCard">
-            <div class="focus-orbit" aria-hidden="true"><canvas id="miniCanvas"></canvas></div>
-            <div class="focus-top"><span class="status-pill"><i data-lucide="radio"></i> MOMENTUM TINGGI</span><span id="focusNumber">01 / 04</span></div>
-            <div class="focus-body">
-              <span class="category" id="focusCategory">Lingkungan</span>
-              <h3 id="focusTitle">Selamatkan 12.000 hektare hutan adat Papua</h3>
-              <p id="focusExcerpt">Desak penghentian izin pembukaan lahan dan akui hak kelola masyarakat adat.</p>
-            </div>
-            <div class="focus-progress">
-              <div class="progress-copy"><strong id="focusSignatures">84.291</strong><span>dari <b id="focusTarget">100.000</b> suara</span></div>
-              <div class="progress-track"><span id="focusBar" style="width:84%"></span><i style="left:10%"></i></div>
-              <div class="milestones"><span>Mulai</span><span>10K<br><b>Respons</b></span><span>100K<br><b>Sidang</b></span></div>
-            </div>
-            <button class="support-btn" id="supportBtn">Dukung petisi ini <i data-lucide="arrow-up-right"></i></button>
-          </aside>
-        </div>
-      </section>
-
-      <section class="how-section" id="cara-kerja">
-        <div class="how-visual">
-          <div class="rings"><span></span><span></span><span></span><i data-lucide="fingerprint"></i></div>
-          <p>Setiap suara diverifikasi.<br>Setiap proses dapat dilacak.</p>
-        </div>
-        <div class="how-content">
-          <p class="kicker">DARI SUARA KE KEBIJAKAN</p>
-          <h2>Proses yang jelas.<br><span>Hasil yang nyata.</span></h2>
-          <div class="steps">
-            <article><b>01</b><div><h3>Mulai gerakan</h3><p>Ajukan isu dengan tujuan dan tuntutan yang jelas. Tim moderator memverifikasi sebelum tayang.</p></div></article>
-            <article><b>02</b><div><h3>Bangun dukungan</h3><p>Bagikan petisi dan pantau pertumbuhan dukungan terverifikasi secara langsung.</p></div></article>
-            <article><b>03</b><div><h3>Dapatkan respons</h3><p>10.000 suara mewajibkan respons resmi. 100.000 suara membuka pertimbangan sidang publik.</p></div></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="transparency" id="transparansi">
-        <div><p class="kicker light">TRANSPARANSI PUBLIK</p><h2>Mandat publik,<br>terlihat oleh publik.</h2></div>
-        <div class="transparency-stat"><strong>99.8%</strong><span>tanda tangan lolos verifikasi identitas</span></div>
-        <div class="transparency-stat"><strong>14 hari</strong><span>rata-rata waktu respons lembaga</span></div>
-        <a href="#">Buka dashboard data <i data-lucide="arrow-up-right"></i></a>
-      </section>
-
-      <section class="final-cta">
-        <span class="kicker">SATU SUARA ADALAH PERMULAAN</span>
-        <h2>Apa yang ingin<br>kamu <em>ubah?</em></h2>
-        <button class="primary-btn large" id="bottomCreate">Mulai petisimu <i data-lucide="arrow-right"></i></button>
-        <p>Gratis. Terverifikasi. Terbuka untuk semua warga.</p>
-      </section>
-    </main>
-
-    <footer>
-      <a class="brand footer-brand" href="#top"><span class="brand-mark"><i data-lucide="landmark"></i></span><span class="brand-name">SUARA</span></a>
-      <p>Infrastruktur partisipasi publik yang independen, aman, dan transparan.</p>
-      <div><a href="#">Aksesibilitas</a><a href="#">Privasi</a><a href="#">Ketentuan</a><a href="#">Bantuan</a><a href="https://glenatron.artstation.com/projects/AJGbV" target="_blank" rel="noopener">3D: Glen Fox Â· CC BY</a></div>
-      <span>Â© 2026 SUARA</span>
-    </footer>
-
-    <dialog id="petitionModal">
-      <form id="quickPetitionForm">
-        <button type="button" class="modal-close" aria-label="Tutup"><i data-lucide="x"></i></button>
-        <div class="modal-progress" aria-label="Langkah pembuatan petisi"><span class="active"></span><span></span><b>1 / 2</b></div>
-        <section class="quick-step active" data-step="1">
-          <p class="kicker">MULAI PERUBAHAN</p>
-          <h2>Buat petisi publik</h2>
-          <p>Ceritakan masalahnya. Draf ini langsung tersimpan dan dapat dikelola melalui dashboard.</p>
-          <label>Judul petisi<input id="quickTitle" required maxlength="120" placeholder="Contoh: Sediakan trotoar aman di..." /></label>
-          <label>Ditujukan kepada<input id="quickOwner" required placeholder="Lembaga atau pengambil keputusan" /></label>
-          <button type="button" class="primary-btn modal-next" id="quickNext">Lanjutkan <i data-lucide="arrow-right"></i></button>
-        </section>
-        <section class="quick-step" data-step="2">
-          <p class="kicker">PERJELAS TUNTUTAN</p>
-          <h2>Lengkapi drafmu</h2>
-          <p>Informasi ini dapat diubah kembali kapan saja melalui dashboard.</p>
-          <div class="quick-grid"><label>Kategori<select id="quickCategory"><option>Umum</option><option>Lingkungan</option><option>Transportasi</option><option>Pendidikan</option><option>Kesehatan</option><option>Teknologi</option></select></label><label>Target dukungan<input id="quickTarget" type="number" min="100" step="100" value="10000" required /></label></div>
-          <label>Ringkasan tuntutan<textarea id="quickDescription" rows="4" required placeholder="Jelaskan masalah dan perubahan yang kamu minta..."></textarea></label>
-          <div class="quick-actions"><button type="button" class="quick-back" id="quickBack"><i data-lucide="arrow-left"></i> Kembali</button><button type="submit" class="primary-btn quick-save">Simpan draf <i data-lucide="check"></i></button></div>
-        </section>
-      </form>
-    </dialog>
-
-    <div class="toast" id="toast"><i data-lucide="check-circle-2"></i><div><strong>Dukunganmu tercatat</strong><span>Terima kasih sudah ikut bersuara.</span></div></div>
-
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <footer class="site-footer"><a class="site-brand" href="/"><span class="brand-mark"><i data-lucide="landmark"></i></span><span class="brand-name">SUARA</span></a><p class="footer-copy">Prototipe platform konsultasi kebijakan publik untuk CITECH 2026. Bukan layanan resmi pemerintah dan tidak mengumpulkan data ke server.</p><div><div class="footer-links"><a href="/consultations.html">Konsultasi</a><a href="/#cara-kerja">Cara kerja</a><a href="/my-responses.html">Masukan saya</a><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">Data © OpenStreetMap</a></div><p class="footer-meta">Data simulasi prototipe<br>© 2026 SUARA</p></div></footer>
+  <script type="module" src="/src/home.js"></script>
+</body>
 </html>

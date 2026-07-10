@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#071425" /><meta name="description" content="Direktori konsultasi kebijakan publik SUARA." /><title>Konsultasi Terbuka — SUARA</title></head>
+<body>
+  <header class="site-header"><div class="header-inner"><a class="site-brand" href="/"><span class="brand-mark"><i data-lucide="landmark"></i></span><span class="brand-name">SUARA</span><span class="brand-sub">Konsultasi Kebijakan Publik</span></a><nav class="main-nav" data-main-nav aria-label="Navigasi utama"><a data-nav-page="consultations.html" href="/consultations.html">Konsultasi Terbuka</a><a href="/#cara-kerja">Cara Kerja</a><a href="/consultation.html?id=blok-m-lez&tab=discussion">Ruang Musyawarah</a><a href="/consultation.html?id=blok-m-lez&tab=outcome">Hasil & Tindak Lanjut</a><a data-nav-page="my-responses.html" href="/my-responses.html">Masukan Saya</a></nav><div class="header-actions"><a class="header-cta" href="/consultations.html">Lihat konsultasi <i data-lucide="arrow-right"></i></a><button class="menu-toggle" data-menu-toggle aria-label="Buka menu"><i data-lucide="menu"></i></button></div></div></header>
+  <div class="prototype-strip"><div><i data-lucide="info"></i><strong>Prototipe layanan.</strong><span>Seluruh daftar dan statistik menggunakan data simulasi.</span></div></div>
+  <main>
+    <section class="page-hero"><div class="page-hero-inner"><div><p class="eyebrow">Direktori kebijakan</p><h1>Temukan konsultasi yang relevan dengan hidup Anda.</h1></div><p>Telusuri rancangan berdasarkan tahap, topik, wilayah, dan kelompok terdampak. Status menunjukkan posisi dalam proses kebijakan.</p></div></section>
+    <section class="directory-layout">
+      <div class="filter-bar" data-reveal>
+        <label class="filter-field"><i data-lucide="search"></i><input id="directorySearch" type="search" placeholder="Cari kebijakan, instansi, atau kelompok..." /></label>
+        <label class="filter-field"><i data-lucide="filter"></i><select id="statusFilter" aria-label="Filter status"><option value="all">Semua status</option><option value="open">Dibuka</option><option value="analysis">Sedang dianalisis</option><option value="closed">Ditutup</option><option value="outcome">Hasil diterbitkan</option></select></label>
+        <label class="filter-field"><i data-lucide="sliders-horizontal"></i><select id="topicFilter" aria-label="Filter topik"><option value="all">Semua topik</option></select></label>
+        <label class="filter-field"><i data-lucide="users"></i><select id="groupFilter" aria-label="Filter kelompok"><option value="all">Semua kelompok</option></select></label>
+      </div>
+      <div class="results-summary"><p><strong id="resultCount">0</strong> konsultasi ditemukan</p><span>Data simulasi untuk demonstrasi prototipe</span></div>
+      <div class="consultation-grid" id="directoryGrid"></div>
+      <div class="empty-results" id="emptyResults"><i data-lucide="search"></i><h2>Tidak ada hasil</h2><p>Ubah kata pencarian atau filter yang dipilih.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="site-brand" href="/"><span class="brand-mark"><i data-lucide="landmark"></i></span><span class="brand-name">SUARA</span></a><p class="footer-copy">Direktori konsultasi kebijakan publik — simulasi untuk CITECH 2026.</p><p class="footer-meta">Bukan kanal resmi pemerintah<br>© 2026 SUARA</p></footer>
+  <script type="module" src="/src/consultations.js"></script>
+</body>
+</html>

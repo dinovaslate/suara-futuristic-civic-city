@@ -6,10 +6,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
-        explore: resolve(import.meta.dirname, 'explore.html'),
-        dashboard: resolve(import.meta.dirname, 'dashboard.html'),
-        petitions: resolve(import.meta.dirname, 'petitions.html'),
-        petition: resolve(import.meta.dirname, 'petition.html'),
+        consultations: resolve(import.meta.dirname, 'consultations.html'),
+        consultation: resolve(import.meta.dirname, 'consultation.html'),
+        myResponses: resolve(import.meta.dirname, 'my-responses.html'),
       },
     },
   },
