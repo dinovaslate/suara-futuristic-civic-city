@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#e31f36" />
   <meta name="description" content="Dashboard pengelolaan petisi publik SUARA." />
-  <title>Dashboard Petisi â€” SUARA</title>
+  <title>Dashboard Petisi — SUARA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="portal-body dashboard-page">
+<body class="civic-mesh portal-body dashboard-page">
   <div class="portal-noise" aria-hidden="true"></div>
   <aside class="dash-sidebar">
     <a class="portal-brand" href="/"><span class="portal-mark"><i data-lucide="landmark"></i></span><b>SUARA</b></a>
@@ -33,7 +33,10 @@
       <article><span>Petisi aktif</span><strong id="statActive">0</strong><small><i data-lucide="radio"></i> sedang mengumpulkan suara</small></article>
       <article><span>Respons resmi</span><strong id="statResponse">0</strong><small class="positive"><i data-lucide="badge-check"></i> melewati 10.000 suara</small></article>
     </section>
-
+    <aside class="dashboard-mesh-feature" aria-label="Instalasi tiga dimensi ruang kerja sipil">
+      <div><p class="portal-kicker"><span></span> CIVIC OPERATIONS</p><h2>Kota membaca setiap sinyal publik.</h2><p>Objek kota bergerak merespons aktivitas petisi dan menjadi lapisan visual bersama seluruh platform.</p></div>
+      <div class="civic-mesh-mount" data-civic-mesh-scene data-scene="operations-hub" aria-label="Model 3D pusat operasi sipil"></div>
+    </aside>
     <section class="petition-manager" id="activity">
       <div class="manager-head"><div><p class="portal-kicker dark"><span></span> DATABASE PETISI</p><h2>Semua gerakan</h2></div><div class="manager-tools"><label><i data-lucide="search"></i><input id="petitionSearch" type="search" placeholder="Cari judul atau kategori..." /></label><select id="statusFilter" aria-label="Filter status"><option value="Semua">Semua status</option><option>Aktif</option><option>Draft</option><option>Selesai</option></select></div></div>
       <div class="petition-table-wrap">
@@ -42,6 +45,13 @@
       </div>
     </section>
   </main>
+
+  <footer class="portal-footer civic-footer dashboard-footer">
+    <a class="portal-brand footer-brand" href="/"><span class="portal-mark"><i data-lucide="landmark"></i></span><b>SUARA</b></a>
+    <p>Infrastruktur partisipasi publik yang independen, aman, dan transparan.</p>
+    <div class="civic-footer-links"><a href="#">Aksesibilitas</a><a href="#">Privasi</a><a href="#">Ketentuan</a><a href="#">Bantuan</a><a class="civic-asset-credit" href="/models/ATTRIBUTION.md">3D assets &amp; licenses</a></div>
+    <span>© 2026 SUARA</span>
+  </footer>
 
   <dialog class="editor-dialog" id="petitionEditor">
     <form id="petitionForm">

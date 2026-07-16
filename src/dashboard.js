@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { createIcons, Landmark, House, Orbit, LayoutDashboard, Activity, Globe2, Plus, Files, TrendingUp, Radio, BadgeCheck, Search, Leaf, BusFront, GraduationCap, HeartPulse, Cpu, Pencil, Trash2, Inbox, X, Save, CheckCircle2 } from 'lucide';
 import { listPetitions, createPetition, updatePetition, deletePetition, subscribePetitions } from './petitionStore.js';
 import './portal.css';
+import './civic-mesh.js';
 
 const iconSet={Landmark,House,Orbit,LayoutDashboard,Activity,Globe2,Plus,Files,TrendingUp,Radio,BadgeCheck,Search,Leaf,BusFront,GraduationCap,HeartPulse,Cpu,Pencil,Trash2,Inbox,X,Save,CheckCircle2};
 let petitions=listPetitions(),pendingDelete=null;

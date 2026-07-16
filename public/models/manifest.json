@@ -1,0 +1,43 @@
+{
+  "models": [
+    {
+      "id": "littlest-tokyo",
+      "files": ["/models/LittlestTokyo.glb"],
+      "creator": "Glen Fox (Glenatron)",
+      "source": "https://glenatron.artstation.com/projects/AJGbV",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "usage": "Detailed conceptual future-district layer; runtime scaling and material treatment."
+    },
+    {
+      "id": "kenney-city-builder-kit",
+      "files": [
+        "/models/kenney-city/building-garage.glb",
+        "/models/kenney-city/building-small-a.glb",
+        "/models/kenney-city/building-small-b.glb",
+        "/models/kenney-city/building-small-c.glb",
+        "/models/kenney-city/building-small-d.glb",
+        "/models/kenney-city/grass-trees-tall.glb",
+        "/models/kenney-city/pavement-fountain.glb",
+        "/models/kenney-city/road-corner.glb",
+        "/models/kenney-city/road-intersection.glb",
+        "/models/kenney-city/road-straight-lightposts.glb",
+        "/models/kenney-city/Textures/colormap.png"
+      ],
+      "creator": "Kenney",
+      "source": "https://github.com/KenneyNL/Starter-Kit-City-Builder",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "usage": "Shared civic-district kit. Models are cloned, recomposed and recolored at runtime with Three.js."
+    },
+    {
+      "id": "jakarta-osm-footprints",
+      "files": ["/data/jakarta-monas-buildings.json"],
+      "creator": "OpenStreetMap contributors",
+      "source": "https://www.openstreetmap.org/",
+      "license": "ODbL 1.0",
+      "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "usage": "Jakarta building-footprint data used for the Monas civic-city composition."
+    }
+  ]
+}

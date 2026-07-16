@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#e31f36" />
   <meta name="description" content="Jelajahi gerakan publik dalam peta dukungan 3D SUARA." />
-  <title>Jelajahi Gerakan â€” SUARA</title>
+  <title>Jelajahi Gerakan — SUARA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="portal-body explore-page">
+<body class="civic-mesh portal-body explore-page">
   <div class="portal-noise" aria-hidden="true"></div>
   <div class="pointer-aura" aria-hidden="true"></div>
   <header class="portal-header">
     <a class="portal-brand" href="/"><span class="portal-mark"><i data-lucide="landmark"></i></span><b>SUARA</b><small>Ruang Petisi Publik</small></a>
-    <nav aria-label="Navigasi utama"><a href="/">Beranda</a><a class="active" href="/explore.html">Jelajahi</a><a href="/petitions.html">Semua petisi</a><a href="/dashboard.html">Dashboard</a></nav>
+    <nav aria-label="Navigasi utama"><a href="/">Beranda</a><a class="active" href="/explore.html">Jelajahi</a><a href="/petitions.html">Semua petisi</a><a href="/#cara-kerja">Cara kerja</a><a href="/dashboard.html">Dashboard</a></nav>
     <a class="header-cta" href="/dashboard.html?action=create"><i data-lucide="plus"></i> Mulai petisi</a>
     <button class="portal-menu" aria-label="Buka menu"><i data-lucide="menu"></i></button>
   </header>
@@ -23,7 +23,7 @@
   <main>
     <section class="explore-hero">
       <div class="explore-copy enter-up">
-        <p class="portal-kicker"><span></span> PETA GERAKAN PUBLIK Â· LIVE</p>
+        <p class="portal-kicker"><span></span> PETA GERAKAN PUBLIK · LIVE</p>
         <h1>Lihat bagaimana<br><em>suara bergerak.</em></h1>
         <p>Setiap titik adalah warga. Setiap garis adalah dukungan yang mengubah isu lokal menjadi mandat nasional.</p>
         <div class="explore-filters" role="group" aria-label="Filter isu">
@@ -42,6 +42,10 @@
     <section class="movement-feed">
       <div class="feed-heading reveal"><div><p class="portal-kicker dark"><span></span> MOMENTUM TERTINGGI</p><h2>Gerakan yang<br>sedang <em>tumbuh.</em></h2></div><p>Diperbarui berdasarkan dukungan terverifikasi dalam 24 jam terakhir.</p></div>
       <div class="movement-grid" id="movementGrid"></div>
+      <aside class="civic-mesh-feature reveal" aria-label="Instalasi tiga dimensi distrik sipil">
+        <div class="civic-mesh-copy"><span>URBAN CIVIC OBJECT 02</span><h3>Ruang publik yang hidup.</h3><p>Miniatur kota interaktif menghubungkan setiap gerakan dengan ruang tempat dampaknya terasa.</p></div>
+        <div class="civic-mesh-mount" data-civic-mesh-scene data-scene="civic-district" aria-label="Model 3D distrik kota futuristik"></div>
+      </aside>
     </section>
 
     <section class="impact-timeline">
@@ -55,7 +59,12 @@
     </section>
   </main>
 
-  <footer class="portal-footer"><a class="portal-brand" href="/"><span class="portal-mark"><i data-lucide="landmark"></i></span><b>SUARA</b></a><p>Infrastruktur partisipasi publik yang aman dan transparan.</p><span>Â© 2026 SUARA</span></footer>
+  <footer class="portal-footer civic-footer">
+    <a class="portal-brand footer-brand" href="/"><span class="portal-mark"><i data-lucide="landmark"></i></span><b>SUARA</b></a>
+    <p>Infrastruktur partisipasi publik yang independen, aman, dan transparan.</p>
+    <div class="civic-footer-links"><a href="#">Aksesibilitas</a><a href="#">Privasi</a><a href="#">Ketentuan</a><a href="#">Bantuan</a><a class="civic-asset-credit" href="/models/ATTRIBUTION.md">3D assets &amp; licenses</a></div>
+    <span>© 2026 SUARA</span>
+  </footer>
   <script type="module" src="/src/explore.js"></script>
 </body>
 </html>

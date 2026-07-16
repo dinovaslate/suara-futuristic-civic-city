@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { createIcons, Landmark, Plus, Menu, Move3d, ArrowUpRight, Leaf, BusFront, GraduationCap, HeartPulse } from 'lucide';
 import { listPetitions, subscribePetitions } from './petitionStore.js';
 import './portal.css';
+import './civic-mesh.js';
 
 const iconSet={Landmark,Plus,Menu,Move3d,ArrowUpRight,Leaf,BusFront,GraduationCap,HeartPulse};
 createIcons({icons:iconSet});

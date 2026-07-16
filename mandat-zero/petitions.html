@@ -1,0 +1,21 @@
+<!doctype html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#050511"><meta name="description" content="Jelajahi seluruh petisi dan mandat publik MANDAT ZERO."><title>Direktori Mandat — MANDAT//ZERO</title></head><body>
+  <main class="portal-main">
+    <section class="portal-hero reveal">
+      <div class="portal-hero__copy"><div class="eyebrow"><i></i> Live civic signal directory</div><h1>Temukan suara<br>yang <em>sejalan.</em></h1><p>Telusuri tuntutan warga, bandingkan kekuatan bukti, dan lihat seberapa dekat setiap gerakan menuju respons resmi.</p></div>
+      <aside class="portal-hero__aside"><small>JARINGAN TERINDEKS</small><strong id="directoryTotal">0</strong><span>MANDAT PUBLIK TERBACA</span></aside>
+    </section>
+    <section class="directory-shell">
+      <aside class="directory-sidebar reveal">
+        <h2>Atur frekuensi</h2>
+        <label><span>Cari signal</span><input id="directorySearch" type="search" placeholder="Judul, lembaga, wilayah…"></label>
+        <label><span>Urutkan</span><select id="directorySort"><option value="momentum">Momentum tertinggi</option><option value="support">Dukungan terbanyak</option><option value="newest">Paling baru</option></select></label>
+        <div class="directory-sidebar__categories" id="directoryCategories"></div>
+      </aside>
+      <div class="directory-main">
+        <div class="directory-toolbar reveal"><h2>Signal publik</h2><span id="directoryCount">0 HASIL</span></div>
+        <div class="directory-list" id="directoryList"></div><div class="portal-empty" id="directoryEmpty" hidden>TIDAK ADA SIGNAL PADA FREKUENSI INI</div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="/src/pages/petitions.js"></script>
+</body></html>

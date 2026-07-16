@@ -3,6 +3,7 @@ import { createIcons, Landmark, Plus, Menu, FileQuestion, ChevronRight, PenLine,
 import { getPetition, listPetitions, updatePetition, subscribePetitions } from './petitionStore.js';
 import './portal.css';
 import './jakarta-theme.css';
+import './civic-mesh.js';
 
 const iconSet={Landmark,Plus,Menu,FileQuestion,ChevronRight,PenLine,Share2,CheckCircle2,ArrowUpRight,Building2};
 const id=new URLSearchParams(location.search).get('id');

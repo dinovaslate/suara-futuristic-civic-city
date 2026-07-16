@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#e31f36" />
   <meta name="description" content="Detail petisi publik SUARA." />
-  <title>Detail Petisi â€” SUARA</title>
+  <title>Detail Petisi — SUARA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="portal-body petition-detail-page">
+<body class="civic-mesh portal-body petition-detail-page">
   <div class="portal-noise" aria-hidden="true"></div>
   <header class="portal-header solid-header">
     <a class="portal-brand" href="/"><span class="portal-mark"><i data-lucide="landmark"></i></span><b>SUARA</b><small>Ruang Petisi Publik</small></a>
-    <nav aria-label="Navigasi utama"><a href="/">Beranda</a><a href="/explore.html">Peta 3D</a><a class="active" href="/petitions.html">Semua petisi</a><a href="/dashboard.html">Dashboard</a></nav>
+    <nav aria-label="Navigasi utama"><a href="/">Beranda</a><a href="/explore.html">Jelajahi</a><a class="active" href="/petitions.html">Semua petisi</a><a href="/#cara-kerja">Cara kerja</a><a href="/dashboard.html">Dashboard</a></nav>
     <a class="header-cta" href="/dashboard.html?action=create"><i data-lucide="plus"></i> Mulai petisi</a><button class="portal-menu" aria-label="Buka menu"><i data-lucide="menu"></i></button>
   </header>
   <main id="detailRoot">
@@ -26,13 +26,18 @@
       </section>
       <section class="detail-layout">
         <article class="detail-story"><p class="portal-kicker dark"><span></span> TENTANG PETISI INI</p><h2>Perubahan yang diminta</h2><p id="detailDescription"></p><div class="detail-meta"><div><span>Dibuat</span><b id="detailCreated"></b></div><div><span>Diperbarui</span><b id="detailUpdated"></b></div><div><span>ID publik</span><b id="detailId"></b></div></div></article>
-        <aside class="support-panel"><p class="support-live"><i></i> DUKUNGAN TERVERIFIKASI</p><strong id="detailSignatures"></strong><span>dari <b id="detailTarget"></b> target suara</span><div class="support-progress"><i id="detailProgress"></i></div><div class="support-milestones"><span>0</span><span>10K Â· Respons</span><span>100%</span></div><button id="detailSupport"><i data-lucide="pen-line"></i> Dukung petisi ini</button><button class="share-action" id="sharePetition"><i data-lucide="share-2"></i> Salin tautan</button><small id="draftNotice">Petisi berstatus Draft. Terbitkan melalui Dashboard untuk menerima dukungan.</small></aside>
+        <aside class="support-panel"><p class="support-live"><i></i> DUKUNGAN TERVERIFIKASI</p><strong id="detailSignatures"></strong><span>dari <b id="detailTarget"></b> target suara</span><div class="support-progress"><i id="detailProgress"></i></div><div class="support-milestones"><span>0</span><span>10K · Respons</span><span>100%</span></div><button id="detailSupport"><i data-lucide="pen-line"></i> Dukung petisi ini</button><button class="share-action" id="sharePetition"><i data-lucide="share-2"></i> Salin tautan</button><small id="draftNotice">Petisi berstatus Draft. Terbitkan melalui Dashboard untuk menerima dukungan.</small></aside>
       </section>
       <section class="related-section"><div><p class="portal-kicker dark"><span></span> GERAKAN TERKAIT</p><h2>Petisi lain yang mungkin penting</h2></div><div class="related-grid" id="relatedGrid"></div></section>
     </div>
   </main>
   <div class="portal-toast" id="detailToast"><i data-lucide="check-circle-2"></i><div><b>Dukungan tercatat</b><span>Terima kasih sudah ikut bersuara.</span></div></div>
-  <footer class="portal-footer"><a class="portal-brand" href="/"><span class="portal-mark"><i data-lucide="landmark"></i></span><b>SUARA</b></a><p>Mandat publik, terlihat oleh publik.</p><span>Â© 2026 SUARA</span></footer>
+  <footer class="portal-footer civic-footer">
+    <a class="portal-brand footer-brand" href="/"><span class="portal-mark"><i data-lucide="landmark"></i></span><b>SUARA</b></a>
+    <p>Infrastruktur partisipasi publik yang independen, aman, dan transparan.</p>
+    <div class="civic-footer-links"><a href="#">Aksesibilitas</a><a href="#">Privasi</a><a href="#">Ketentuan</a><a href="#">Bantuan</a><a class="civic-asset-credit" href="/models/ATTRIBUTION.md">3D assets &amp; licenses</a></div>
+    <span>© 2026 SUARA</span>
+  </footer>
   <script type="module" src="/src/petition.js"></script>
 </body>
 </html>

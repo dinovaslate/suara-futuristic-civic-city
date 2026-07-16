@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050511" />
+    <meta name="description" content="MANDAT//ZERO — observatorium kebijakan dan petisi publik Indonesia." />
+    <title>MANDAT//ZERO — Public Policy Observatory</title>
+  </head>
+  <body>
+    <canvas id="world" aria-hidden="true"></canvas>
+    <div class="ambient" aria-hidden="true">
+      <span class="ambient__flare ambient__flare--red"></span>
+      <span class="ambient__flare ambient__flare--blue"></span>
+      <span class="ambient__scan"></span>
+      <span class="ambient__noise"></span>
+    </div>
+
+    <div class="boot" id="boot" aria-live="polite">
+      <div class="boot__mark"><i></i><i></i><i></i></div>
+      <div class="boot__line"><span></span></div>
+      <p>MENGHUBUNGKAN JARINGAN SIPIL</p>
+    </div>
+
+    <header class="topbar" id="topbar">
+      <a class="brand magnetic" href="#home" aria-label="MANDAT ZERO, kembali ke beranda">
+        <span class="brand__sigil">M/0</span>
+        <span class="brand__word">MANDAT<span>//ZERO</span></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Navigasi utama">
+        <a href="petitions.html">Jelajahi</a>
+        <a href="#review">Policy Lab</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+      <div class="topbar__actions">
+        <span class="live-pill"><i></i><span id="liveCount">8.204</span> live</span>
+        <button class="button button--mini magnetic" data-open-editor>
+          <span>Ajukan mandat</span><b>＋</b>
+        </button>
+        <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="nav" aria-label="Buka menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home" data-scene="city">
+        <div class="hero__telemetry telemetry telemetry--top">
+          <span>JKT / 06°12′S</span><span>NODE 001</span><span>PUBLIC NETWORK ONLINE</span>
+        </div>
+        <div class="hero__content reveal">
+          <div class="eyebrow"><i></i> Observatorium kebijakan publik</div>
+          <h1>
+            <span>Kebijakan adalah</span>
+            <span class="hero__outline">medan gravitasi</span>
+            <span class="hero__acid">suara publik.</span>
+          </h1>
+          <p>Uji aturan. Bangun tekanan. Ubah suara warga menjadi mandat yang tidak bisa diabaikan.</p>
+          <div class="hero__actions">
+            <a class="button button--primary magnetic" href="petitions.html"><span>Masuki jaringan</span><b>↘</b></a>
+            <button class="button button--ghost magnetic" data-open-editor><span>Buat petisi</span><b>＋</b></button>
+          </div>
+        </div>
+
+        <div class="hero__side reveal">
+          <div class="radar-card glass">
+            <div class="radar-card__head"><span>PUBLIC PRESSURE</span><b>REAL-TIME</b></div>
+            <strong id="heroSupport">028,471</strong>
+            <span>suara terverifikasi / 24 jam</span>
+            <div class="wave" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+          </div>
+          <div class="orbit-readout">
+            <span>ORBITAL CIVIC INDEX</span><strong>87.2</strong><small>↑ 12.4%</small>
+          </div>
+        </div>
+
+        <div class="hero__metrics reveal">
+          <article><small>MANDAT AKTIF</small><strong id="metricPolicies">06</strong><span>lintas isu nasional</span></article>
+          <article><small>SUARA TERHIMPUN</small><strong id="metricVoices">284K</strong><span>identitas terverifikasi</span></article>
+          <article><small>REVIEW TERBUKA</small><strong id="metricReviews">04</strong><span>menunggu tanggapan</span></article>
+        </div>
+
+        <div class="scroll-cue"><span>SCROLL TO DESCEND</span><i></i></div>
+      </section>
+
+      <section class="signal section" id="signal" data-scene="network">
+        <div class="section__head reveal">
+          <div>
+            <div class="eyebrow"><i></i> Signal publik / sekarang</div>
+            <h2>Gerakan yang sedang<br><em>membengkokkan sistem.</em></h2>
+          </div>
+          <p>Setiap kartu adalah simpul hidup: dukung, audit, buka detail, atau ajukan tandingan berbasis bukti.</p>
+        </div>
+
+        <div class="command-bar glass reveal">
+          <label class="search-field">
+            <span>⌕</span>
+            <input id="searchInput" type="search" placeholder="Cari isu, lembaga, atau wilayah…" autocomplete="off" />
+          </label>
+          <div class="filter-pills" id="filterPills" aria-label="Filter kategori">
+            <button class="is-active" data-filter="all">Semua</button>
+            <button data-filter="Kota">Kota</button>
+            <button data-filter="Iklim">Iklim</button>
+            <button data-filter="Digital">Digital</button>
+            <button data-filter="Kesehatan">Kesehatan</button>
+          </div>
+          <select id="sortSelect" aria-label="Urutkan petisi">
+            <option value="momentum">Momentum</option>
+            <option value="support">Dukungan</option>
+            <option value="newest">Terbaru</option>
+          </select>
+        </div>
+
+        <div class="policy-grid" id="policyGrid" aria-live="polite"></div>
+        <div class="empty-state" id="emptyState" hidden>Tidak ada signal pada frekuensi ini.</div>
+      </section>
+
+      <section class="review section" id="review" data-scene="core">
+        <div class="review__shell">
+          <div class="review__copy reveal">
+            <div class="eyebrow"><i></i> Policy impact laboratory</div>
+            <h2>Jangan hanya<br>tanda tangan.<br><em>Bedah dampaknya.</em></h2>
+            <p>Kami membuka asumsi, biaya, penerima manfaat, dan risiko implementasi sebelum sebuah tuntutan menjadi tekanan politik.</p>
+            <div class="review__tabs" id="reviewTabs">
+              <button class="is-active" data-review-tab="impact">Dampak</button>
+              <button data-review-tab="evidence">Bukti</button>
+              <button data-review-tab="risk">Risiko</button>
+            </div>
+          </div>
+
+          <div class="policy-lab glass reveal" id="policyLab">
+            <div class="policy-lab__top">
+              <span id="labCode">POLICY / 001</span>
+              <span class="status-dot"><i></i><b id="labStatus">MENGUMPULKAN SUARA</b></span>
+            </div>
+            <h3 id="labTitle">Trotoar teduh dalam radius 500 meter dari transportasi publik.</h3>
+            <p id="labSummary">Mandat desain kota yang memprioritaskan pejalan kaki, kanopi pohon, dan akses universal.</p>
+            <div class="lab-chart" id="labChart" aria-label="Visualisasi dukungan kebijakan">
+              <div class="lab-chart__rings"><i></i><i></i><i></i><b id="labPercent">72%</b></div>
+              <dl>
+                <div><dt>Dukungan</dt><dd id="labSupport">42.840</dd></div>
+                <div><dt>Target</dt><dd id="labTarget">60.000</dd></div>
+                <div><dt>Auditor</dt><dd id="labAuditors">1.249</dd></div>
+              </dl>
+            </div>
+            <div class="lab-insight" id="labInsight">
+              <span>IMPACT VECTOR</span>
+              <p id="labInsightCopy">+18% akses pejalan kaki · −11% perjalanan kendaraan pendek · 1,3 juta warga terdampak.</p>
+            </div>
+            <div class="lab-actions">
+              <button class="button button--primary magnetic" id="labSupportButton"><span>Dukung mandat</span><b>＋1</b></button>
+              <button class="button button--ghost magnetic" id="labDetailButton"><span>Buka audit penuh</span><b>↗</b></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+            <div class="section-divider section-divider--review-process" aria-hidden="true"><i></i></div>
+
+      <section class="process section" id="process" data-scene="orbit">
+        <div class="process__head reveal">
+          <div class="eyebrow"><i></i> Public pressure protocol</div>
+          <h2>Satu suara.<br><span>Empat perubahan wujud.</span></h2>
+        </div>
+        <div class="process__rail">
+          <article class="reveal"><b>01</b><span>CAPTURE</span><h3>Isu menjadi mandat.</h3><p>Tuntutan ditulis sebagai target yang dapat diaudit, bukan hanya keluhan.</p></article>
+          <article class="reveal"><b>02</b><span>VERIFY</span><h3>Suara menjadi bukti.</h3><p>Dukungan, lokasi, dan bukti warga membentuk peta tekanan yang hidup.</p></article>
+          <article class="reveal"><b>03</b><span>REVIEW</span><h3>Bukti menguji kebijakan.</h3><p>Dampak, risiko, dan biaya dibuka agar publik dapat mengoreksi tuntutan.</p></article>
+          <article class="reveal"><b>04</b><span>ESCALATE</span><h3>Tekanan menjadi keputusan.</h3><p>Ambang dukungan memicu tanggapan resmi dan agenda dengar pendapat.</p></article>
+        </div>
+      </section>
+
+      <div class="section-divider section-divider--process-finale" aria-hidden="true"><i></i></div>
+
+      <section class="finale section" data-scene="finale">
+        <div class="finale__signal" aria-hidden="true"><i></i><i></i><i></i><canvas class="finale__model" id="finaleModel"></canvas></div>
+        <div class="finale__copy reveal">
+          <div class="eyebrow"><i></i> Transmit your mandate</div>
+          <h2 class="finale__title"><span class="finale__title-top">Jangan tunggu</span><span class="finale__title-bottom"><em class="finale__title-accent">kota berubah</em><em class="finale__title-outline">sendiri.</em></span></h2>
+          <p>Kirim signal pertamamu. Sistem akan menyimpan draft secara lokal dan menampilkannya langsung dalam jaringan.</p>
+          <button class="button button--primary button--huge magnetic" data-open-editor><span>Buat mandat baru</span><b>↗</b></button>
+        </div>
+      </section>
+    </main>
+
+        <div class="section-divider section-divider--finale-footer" aria-hidden="true"><i></i></div>
+
+    <footer class="footer">
+      <div class="footer__primary">
+        <a class="brand" href="#home"><span class="brand__sigil">M/0</span><span class="brand__word">MANDAT<span>//ZERO</span></span></a>
+        <p class="footer__copy">Observatorium kebijakan publik untuk melacak tuntutan, menguji bukti, dan membangun tekanan warga yang dapat dipertanggungjawabkan.</p>
+        <a class="footer__action" href="dashboard.html?action=create"><span>Ajukan mandat</span><b>↗</b></a>
+      </div>
+      <div class="footer__rail">
+        <nav class="footer__nav" aria-label="Navigasi footer"><a href="petitions.html"><small>01</small>Direktori</a><a href="#review"><small>02</small>Policy Lab</a><a href="dashboard.html"><small>03</small>Dashboard</a><a href="account.html"><small>04</small>Akun</a></nav>
+        <div class="footer__meta"><span>THREE.JS · CC BY ASSET</span><span>© 2026 MANDAT ZERO</span></div>
+      </div>
+    </footer>
+
+    <dialog class="dialog" id="policyDialog">
+      <div class="dialog__scrim" data-close-dialog></div>
+      <article class="dialog__panel">
+        <button class="dialog__close" data-close-dialog aria-label="Tutup">×</button>
+        <div id="policyDialogContent"></div>
+      </article>
+    </dialog>
+
+    <dialog class="dialog" id="editorDialog">
+      <div class="dialog__scrim" data-close-editor></div>
+      <article class="dialog__panel dialog__panel--editor">
+        <button class="dialog__close" data-close-editor aria-label="Tutup">×</button>
+        <div class="eyebrow"><i></i> New public transmission</div>
+        <h2 id="editorTitle">Ajukan mandat baru.</h2>
+        <form id="policyForm">
+          <input type="hidden" name="id" />
+          <label><span>Judul mandat</span><input name="title" required maxlength="110" placeholder="Apa yang harus berubah?" /></label>
+          <div class="form-grid">
+            <label><span>Kategori</span><select name="category" required><option>Kota</option><option>Iklim</option><option>Digital</option><option>Kesehatan</option></select></label>
+            <label><span>Ditujukan kepada</span><input name="owner" required placeholder="Pemprov, DPR, Kementerian…" /></label>
+          </div>
+          <label><span>Ringkasan dan alasan</span><textarea name="summary" required rows="5" placeholder="Jelaskan masalah, siapa yang terdampak, dan perubahan yang diminta."></textarea></label>
+          <div class="form-grid">
+            <label><span>Target dukungan</span><input name="target" type="number" min="100" max="1000000" value="10000" required /></label>
+            <label><span>Wilayah</span><input name="region" required placeholder="Jakarta / Nasional" /></label>
+          </div>
+          <button class="button button--primary" type="submit"><span>Simpan ke jaringan</span><b>↗</b></button>
+        </form>
+      </article>
+    </dialog>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
