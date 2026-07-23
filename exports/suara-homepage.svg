@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1440"
+     height="5134"
+     viewBox="0 0 1440 5134"
+     role="img"
+     aria-labelledby="title description">
+  <title id="title">SUARA homepage</title>
+  <desc id="description">Full-page browser capture of the SUARA public consultation homepage.</desc>
+  <image width="1440"
+         height="5134"
+         preserveAspectRatio="xMidYMin meet"
+         href="suara-homepage.png"
+         xlink:href="suara-homepage.png" />
+</svg>
